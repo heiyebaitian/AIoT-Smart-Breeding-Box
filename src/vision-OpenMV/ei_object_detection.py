@@ -92,14 +92,14 @@ while(True):
         if (i == 0): continue # background class
         if (len(detection_list) == 0): continue # no detections for this class?
 
-        x1 = 0
-        y1 = 0
-        x2 = 0
-        y2 = 0
-        x3 = 0
-        y3 = 0
-        x4 = 0
-        y4 = 0
+#        x1 = 0
+#        y1 = 0
+#        x2 = 0
+#        y2 = 0
+#        x3 = 0
+#        y3 = 0
+#        x4 = 0
+#        y4 = 0
 
         print("********** %s **********" % labels[i])
         for d in detection_list:
