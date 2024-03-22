@@ -1,6 +1,8 @@
 # Edge Impulse - OpenMV Object Detection Example
 
 import sensor, image, time, os, tf, math, uos, gc
+from machine import UART
+import json
 
 sensor.reset()                         # Reset and initialize the sensor.
 sensor.set_pixformat(sensor.RGB565)    # Set pixel format to RGB565 (or GRAYSCALE)
@@ -11,6 +13,9 @@ sensor.skip_frames(time=2000)          # Let the camera adjust.
 net = None
 labels = None
 min_confidence = 0.5
+counts = 0
+
+uart = UART(3, 115200)
 
 try:
     # load the model, alloc the model file on the heap if we have at least 64K free after loading
@@ -49,10 +54,16 @@ while(True):
 
         print("********** %s **********" % labels[i])
         for d in detection_list:
+            counts += 1
             [x, y, w, h] = d.rect()
             center_x = math.floor(x + (w / 2))
             center_y = math.floor(y + (h / 2))
             print('x %d\ty %d' % (center_x, center_y))
             img.draw_circle((center_x, center_y, 12), color=colors[i], thickness=2)
+
+            print('counts:',counts)
+            str_counts=json.dumps(counts)
+            uart.write(str_counts+'\r\n')
+        counts = 0
 
     print(clock.fps(), "fps", end="\n\n")
