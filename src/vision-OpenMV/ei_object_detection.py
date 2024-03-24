@@ -92,6 +92,24 @@ while(True):
         if (i == 0): continue # background class
         if (len(detection_list) == 0): continue # no detections for this class?
 
+#        if(detection_list[i] = 0)
+#        for d in detection_list:
+#            counts += 1
+#            [x, y, w, h] = d.rect()
+#            x1 = xdetection_list
+#            y1 = y
+#            x2 = x+w
+#            y2 = y+h
+#        else
+#        for d in detection_list:
+#            counts += 1
+#            [x, y, w, h] = d.rect()
+#            x3 = x
+#            y3 = y
+#            x4 = x+w
+#            y4 = y+h
+
+
 #        x1 = 0
 #        y1 = 0
 #        x2 = 0
@@ -105,16 +123,6 @@ while(True):
         for d in detection_list:
             counts += 1
             [x, y, w, h] = d.rect()
-#            if(i = 0) #have some question,i isn't define
-#                x1 = x
-#                y1 = y
-#                x2 = x+w
-#                y2 = y+h
-#            else
-#                x3 = x
-#                y3 = y
-#                x4 = x+w
-#                y4 = y+h
             center_x = math.floor(x + (w / 2))
             center_y = math.floor(y + (h / 2))
             print('x %d\ty %d' % (center_x, center_y))
@@ -122,8 +130,8 @@ while(True):
             print('counts:',counts)
             print('detection:',json.dumps(detection_list))
             str_counts=json.dumps(counts)
-            uart.write(str_counts+'\r\n')
-            uart.write(json.dumps(labels[i]))
+            # uart.write(str_counts+'\r\n')
+            uart.write(labels[i])
         counts = 0
 
     print(clock.fps(), "fps", end="\n\n")
