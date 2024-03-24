@@ -119,10 +119,11 @@ while(True):
             center_y = math.floor(y + (h / 2))
             print('x %d\ty %d' % (center_x, center_y))
             img.draw_circle((center_x, center_y, 12), color=colors[i], thickness=2)
-
             print('counts:',counts)
+            print('detection:',json.dumps(detection_list))
             str_counts=json.dumps(counts)
             uart.write(str_counts+'\r\n')
+            uart.write(json.dumps(labels[i]))
         counts = 0
 
     print(clock.fps(), "fps", end="\n\n")
