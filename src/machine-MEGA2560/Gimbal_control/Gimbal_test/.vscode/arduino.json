@@ -1,0 +1,7 @@
+{
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "programmer": "avrisp",
+    "port": "COM7",
+    "sketch": "Gimbal_test.ino"
+}
