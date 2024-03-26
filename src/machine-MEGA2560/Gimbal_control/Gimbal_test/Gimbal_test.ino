@@ -50,19 +50,15 @@ float a_acc = 1000;
 
 int task_enable = 0;
 int task[][3] = {
-  {4000,4000,11000},
-  {4000,15000,11000},
-  {7000,15000,11000},
-  {7000,4000,11000},
-  {10000,4000,11000},
-  {10000,15000,11000},
-  {13000,15000,11000},
-  {13000,4000,11000},
-};
-
-int task2[][3] = {
-  {4000,4000,11000},
-  {13000,15000,11000}
+  {100,100,11000},
+  {100,4000,11000},
+  {100,15000,11000},
+  {4566,15000,11000},
+  {4566,4000,11000},
+  {9033,4000,11000},
+  {9033,15000,11000},
+  {13500,15000,11000},
+  {13500,4000,11000},
 };
 
 
@@ -105,7 +101,7 @@ void loop() {
   //stepper_stop();
   Serial_app();
   stepper_run();
-  if(task_enable)  stepper_task(task,8);
+  if(task_enable)  stepper_task(task,9);
 }
 
 /*
@@ -422,7 +418,11 @@ void stepper_calibration(){
             stepperY.run();
             Serial.println("Y move");
         }
-        if(!z_stop){  
+        else if (flag == 1)
+        {
+          flag = 2;
+        }
+        if(!z_stop && flag == 2 ){  
             stepperZ.move(-2000);
             stepperZ.run();
             Serial.println("Z move");
