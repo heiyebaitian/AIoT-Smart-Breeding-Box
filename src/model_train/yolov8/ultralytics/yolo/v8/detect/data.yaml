@@ -1,5 +1,0 @@
-train: D:\yolov8\zjb\images\train
-val: D:\yolov8\zjb\images\val
-nc: 1
-#class names
-names: ['zjb']
