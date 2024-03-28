@@ -1,5 +1,5 @@
 #ifndef DEBUG_MODE 
-#define DEBUG_MODE 1  //  定义是否开启Debug模式 1开启 0关闭
+#define DEBUG_MODE 0  //  定义是否开启Debug模式 1开启 0关闭
 #define BLINKER_PRINT Serial //  定义Debug输出端口
 #define BLINKER_WIFI  //  定义WIFI功能
 #define DELAY_TS 5000 
@@ -87,4 +87,6 @@ void loop() {
 /* 串口初始化代码 */
 void Serial_init(){
   Serial.begin(115200);
+  Serial1.begin(115200);
+  Serial2.begin(115200);
 }

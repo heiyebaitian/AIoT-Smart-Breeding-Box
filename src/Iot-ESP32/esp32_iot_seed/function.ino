@@ -9,7 +9,9 @@ void Blinker_app(){
 
 //  串口任务程序
 void Serial_app(){
-  
+  Serial_analysis();  // 串口1命令解析
+  Serial1_analysis(); //  串口2命令解析
+  Serial2_analysis(); //  串口3命令解析
 }
 
 
@@ -75,13 +77,55 @@ void dataStorage()
 /* Debug函数用于自动调整变量数值以供测试 */
 void Debug(){
   if(DEBUG_MODE){
-    if(Temperature[0]<150) Temperature[0]+=10;
-    else Temperature[0]=-100;
+    if(Temperature[0]<50) Temperature[0]+=10;
+    else Temperature[0]=-10;
     if(Humidity[0]<100) Humidity[0]+=1;
-    else Humidity[0]=-10;
+    else Humidity[0]=0;
     if(Sh[0]<100) Sh[0]+=1;
-    else Sh[0]=-10;
-    if(CO2[0]<1500) CO2[0]+=100;
-    else CO2[0]=-10;
+    else Sh[0]=0;
+    if(CO2[0]<400) CO2[0]+=100;
+    else CO2[0]=0;
   }
+}
+
+
+
+// 串口1解析器
+void Serial_analysis(){
+  String inString ="" ; //串口接收命令存放区
+  while(Serial.available()>0){ //检查缓冲区是否存在数据
+    inString += char(Serial.read()); //读取缓冲区
+    delay(10);      // 延时函数用于等待字符完全进入缓冲区
+  }
+
+
+  
+}
+
+
+
+// 串口2解析器
+void Serial1_analysis(){
+  String inString ="" ; //串口接收命令存放区
+  while(Serial1.available()>0){ //检查缓冲区是否存在数据
+    inString += char(Serial1.read()); //读取缓冲区
+    delay(10);      // 延时函数用于等待字符完全进入缓冲区
+  }
+
+
+  
+}
+
+
+
+// 串口3解析器
+void Serial2_analysis(){
+  String inString ="" ; //串口接收命令存放区
+  while(Serial2.available()>0){ //检查缓冲区是否存在数据
+    inString += char(Serial2.read()); //读取缓冲区
+    delay(10);      // 延时函数用于等待字符完全进入缓冲区
+  }
+
+
+  
 }
