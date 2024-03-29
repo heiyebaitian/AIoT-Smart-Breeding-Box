@@ -47,4 +47,7 @@ EE EE EE FF FF FF
 ```
 
 
+
+
 ### 二、MCU to 屏幕
+详细请见 `/doc` 下的指令集文档
