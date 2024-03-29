@@ -43,6 +43,15 @@ void Report_app();
 /* 声明一般函数 */
 void Serial_init();
 
+/* 声明功能函数 */
+void Text_Text_info();
+void dataStorage();
+void Debug();
+void Serial_analysis();
+void Serial1_analysis();
+int Serial2_analysis();
+
+
 
 /* 创建多协程任务信息 */
 Task Blink_app_task(TASK_IMMEDIATE,TASK_FOREVER,&Blinker_app);
