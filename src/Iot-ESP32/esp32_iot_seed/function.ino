@@ -1,3 +1,6 @@
+/* 全局变量 */
+extern int pageid = 0;
+
 
 
 
@@ -59,6 +62,10 @@ void Text_Text_info(){
     case 3:Text_info.print("ERROR：土壤湿度传感器异常，请检查！");
             break;
     case 4:Text_info.print("ERROR；CO2传感器异常，请检查！");
+            break;
+    case 5:Text_info.print("ERROR：HT32串口传输长度异常");
+            break;
+    case 6:Text_info.print("ERROR：HT32串口标记异常");
             break;
     default:Text_info.print("ERROR：系统发生未知错误，请检查！");
             break;
@@ -182,14 +189,24 @@ void Debug(){
 
 // 串口1解析器
 void Serial_analysis(){
-  String inString ="" ; //串口接收命令存放区
+  char cash[50]; //串口接收命令存放区
+  int length = 0;
   while(Serial.available()>0){ //检查缓冲区是否存在数据
-    inString += char(Serial.read()); //读取缓冲区
+    cash[length++] += char(Serial2.read()); //读取缓冲区
     delay(10);      // 延时函数用于等待字符完全进入缓冲区
   }
-
-
-  
+  if(length == 27){
+    if(cash[0] == 0xFF && cash[1] == 0xFE){
+        water_status = cash[2]; //  液位传感器状态
+        Sh[0] = cash[3];  //  土壤湿度传感器
+        waterpump_status = cash[4]; //  液位传感器状态
+        fan_status = cash[5]; //  风扇状态
+        light_status = cash[6]; //  生长灯状态
+        
+    }
+    else error_flag = 6; // 错误标记抛出异常:数据格式错误
+  }
+  else error_flag = 5;  // 错误标记抛出异常：数据长度错误
 }
 
 
@@ -221,24 +238,50 @@ int Serial2_analysis(){
   if(cash[length-1]!=0xFF || cash[length-2]!=0xFF || cash[length-3]!=0xFF) return -1; //如果接收的数据末尾三个字节不是0xFF，则一定不是正确的命令，直接返回错误-1
 
   if(length>0){
+
     /* 指令长度4 */
     if(length == 4){
       /* 系统启动报告 */
-      if(cash[0]==0x88){
+      if(cash[0] == 0x88){
 
       }
 
       /* BOOT就绪报告 */
-      if(cash[0]==0x00){
+      if(cash[0] == 0x00){
         Serial2.print("mcu_status=1");  //  将状态置1完成启动
       }
     }
+
     /* 指令长度5 */
     if(length == 5){
       /* 页面ID报告 */
       if(cash[0]==0x01){
-
+        pageid = cash[1]; //  将页面ID赋值
       }
+    }
+
+    /* 指令长度6 */
+    if(length == 6){
+      /* 遇到错误自动重启屏幕 */
+      if(cash[0]==0xEE && cash[1]==0xEE && cash[2]==0xEE){
+        Serial2.print("rest");
+      }
+    }
+
+    /* 指令长度7 */
+    if(length == 7){
+      /* 一般按钮触发报告 */
+      if(cash[0] == 0x02 && cash[1] == pageid){
+      }
+
+      /* 双态按钮触发报告 */
+      if(cash[0] == 0x03 && cash[1] == pageid){
+      }
+
+      /* 滑动条报告 */
+      if(cash[0] == 0x04 && cash[1] == pageid){
+      }
+
     }
   }
 }
