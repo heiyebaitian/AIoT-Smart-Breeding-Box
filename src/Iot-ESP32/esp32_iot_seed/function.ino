@@ -26,7 +26,6 @@ void Serial_app(){
 
 //  信息自动上报任务程序
 void Report_app(){
-  error_flag = 0; //  重置错误标记
   Number_Sensor_Temperature();
   Report_app_task.delay(DELAY_TS);
   Number_Sensor_Humidity();
@@ -35,7 +34,16 @@ void Report_app(){
   Report_app_task.delay(DELAY_TS);
   Number_Sensor_CO2();
   Report_app_task.delay(DELAY_TS);
-  Text_Text_info(); //  为了能正确获取错误信息，请确保此函数最后执行
+  Status_WaterPump();
+  Report_app_task.delay(DELAY_TS);
+  Status_Light();
+  Report_app_task.delay(DELAY_TS);
+  Status_Fan();
+  Report_app_task.delay(DELAY_TS);
+  Status_Water();
+  Report_app_task.delay(DELAY_TS);
+  Text_Text_info(); //  为了能正确获取错误信息，请确保此函数最后执行发送数据
+  Serial_tx();
   Debug();
   Report_app_task.delay(DELAY_TS);
 }
@@ -67,10 +75,13 @@ void Text_Text_info(){
             break;
     case 6:Text_info.print("ERROR：HT32串口标记异常");
             break;
+    case 7:Text_info.print("ERROR：HT32-气体传感器数据异常");
+            break;
     default:Text_info.print("ERROR：系统发生未知错误，请检查！");
             break;
             
   }
+  error_flag = 0; //  重置错误标记
 }
 
 
@@ -115,11 +126,11 @@ void Number_Sensor_Humidity(){
   }
   if(Humidity[0]<Humidity[1] || Humidity[0]>Humidity[2]){ //  如果超目标范围则红色输出，否则蓝色色输出
     Sensor_Humidity.color("#DC143C"); //红色
-    Sensor_Humidity.print(Humidity[0]);
+    Sensor_Humidity.print((int)Humidity[0]);
   }
   else{
     Sensor_Humidity.color("#1E90FF"); //蓝色
-    Sensor_Humidity.print(Humidity[0]);
+    Sensor_Humidity.print((int)Humidity[0]);
   }
 }
 
@@ -150,7 +161,6 @@ void Number_Sensor_Sh(){
 
 
 
-
 /* CO2度传感器回传函数 */
 void Number_Sensor_CO2(){
   Sensor_CO2.unit("ppm"); //  设置单位
@@ -171,6 +181,57 @@ void Number_Sensor_CO2(){
 }
 
 
+/* 水泵状态回传函数 */
+void Status_WaterPump(){
+  if(waterpump_status == 0){ 
+    Button_WaterPump.color("#A9A9A9");  //灰色
+    Button_WaterPump.print();
+  }
+  else{
+    Button_WaterPump.color("#1E90FF");  //蓝色
+    Button_WaterPump.print();
+  }
+}
+
+/* 生长灯状态回传函数 */
+void Status_Light(){
+  if(light_status == 0){ 
+    Button_Light.color("#A9A9A9");  //灰色
+    Button_Light.print();
+  }
+  else{
+    Button_Light.color("#1E90FF");  //蓝色
+    Button_Light.print();
+  }
+}
+
+
+/* 生长灯状态回传函数 */
+void Status_Fan(){
+  if(fan_status == 0){ 
+    Button_Fan.color("#A9A9A9");  //灰色
+    Button_Fan.print();
+  }
+  else{
+    Button_Fan.color("#1E90FF");  //蓝色
+    Button_Fan.print();
+  }
+}
+
+/* 液位状态回传函数 */
+void Status_Water(){
+  if(water_status == 0){ 
+    Button_water.color("#DC143C");  //红色
+    Button_water.print();
+  }
+  else{
+    Button_water.color("#1E90FF");  //蓝色
+    Button_water.print();
+  }
+}
+
+
+
 /* Debug函数用于自动调整变量数值以供测试 */
 void Debug(){
   if(DEBUG_MODE){
@@ -185,15 +246,19 @@ void Debug(){
   }
 }
 
+/* 高低字节合并函数 */
+uint16_t merge_high_low_bytes(uint8_t high_byte, uint8_t low_byte) {
+    return ((uint16_t)high_byte << 8) | low_byte;
+}
 
 
 // 串口1解析器
 void Serial_analysis(){
-  char cash[50]; //串口接收命令存放区
-  int length = 0;
+  char cash[100]={0}; //串口接收命令存放区
+  uint16_t length = 0;
   while(Serial.available()>0){ //检查缓冲区是否存在数据
-    cash[length++] += char(Serial2.read()); //读取缓冲区
-    delay(10);      // 延时函数用于等待字符完全进入缓冲区
+    cash[length++] += char(Serial.read()); //读取缓冲区
+    delay(1);      // 延时函数用于等待字符完全进入缓冲区
   }
   if(length == 27){
     if(cash[0] == 0xFF && cash[1] == 0xFE){
@@ -202,11 +267,18 @@ void Serial_analysis(){
         waterpump_status = cash[4]; //  液位传感器状态
         fan_status = cash[5]; //  风扇状态
         light_status = cash[6]; //  生长灯状态
-        
+        if(cash[7] == 0x00 && cash[8] == 0x02){
+          CO2[0] = merge_high_low_bytes(cash[9],cash[10]);  //  CO2数值
+          CH2O[0] = merge_high_low_bytes(cash[11],cash[12]);  //  甲醛数值
+          TVOC[0] = merge_high_low_bytes(cash[13],cash[14]);  //  TVOC数值
+          Temperature[0] = cash[19];
+          Humidity[0] = cash[21];
+        }
+        else error_flag = 7; // 错误标记抛出异常:气体传感器数据异常
     }
     else error_flag = 6; // 错误标记抛出异常:数据格式错误
   }
-  else error_flag = 5;  // 错误标记抛出异常：数据长度错误
+  else if(length > 0) error_flag = 5;  // 错误标记抛出异常：数据长度错误
 }
 
 
@@ -228,7 +300,7 @@ void Serial1_analysis(){
 // 串口3解析器
 int Serial2_analysis(){
   char cash[50]; //串口接收命令存放区
-  int length = 0;
+  uint16_t length = 0;
   while(Serial2.available()>0){ //检查缓冲区是否存在数据
     cash[length++] += char(Serial2.read()); //读取缓冲区
     delay(10);      // 延时函数用于等待字符完全进入缓冲区
@@ -284,4 +356,19 @@ int Serial2_analysis(){
 
     }
   }
+}
+
+
+
+/* 串口1指令发送函数 */
+void Serial_tx(){
+  Serial.printf("%c",0xFF);
+  Serial.printf("%c",0xFE);
+  Serial.printf("%c",0x00);
+  if(waterpump_status != waterpump_goal) Serial.printf("%c",waterpump_goal);
+  else Serial.printf("%c",waterpump_status);
+  if(fan_status != fan_goal) Serial.printf("%c",fan_goal);
+  else Serial.printf("%c",fan_status);
+  if(light_status != light_goal) Serial.printf("%c",light_goal);
+  else Serial.printf("%c",light_status);
 }
