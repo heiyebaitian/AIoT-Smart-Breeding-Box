@@ -1,5 +1,5 @@
 #ifndef DEBUG_MODE 
-#define DEBUG_MODE 1  //  定义是否开启Debug模式 1开启 0关闭
+#define DEBUG_MODE 0  //  定义是否开启Debug模式 1开启 0关闭
 #define BLINKER_PRINT Serial //  定义Debug输出端口
 #define BLINKER_WIFI  //  定义WIFI功能
 #define DELAY_TS 5000 
@@ -15,9 +15,18 @@ char pswd[] = "guoxilin"; //  此处放置WIFI的PASSWORD
 
 /* 系统全局变量 */
 extern float Temperature[3] = {15,-5,25}; // 温度 0:当前温度 1:温度目标范围低位 2:温度目标范围高位
-extern int Humidity[3] = {20,30,80}; // 湿度 0:当前湿度 1:湿度目标范围低位 2:湿度目标范围高位
-extern int Sh[3] = {25,30,80}; // 土壤湿度 0:当前湿度 1:湿度目标范围低位 2:湿度目标范围高位
-extern int CO2[3] = {25,0,500}; // 土壤湿度 0:当前湿度 1:湿度目标范围低位 2:湿度目标范围高位
+extern uint16_t Humidity[3] = {20,30,80}; // 湿度 0:当前湿度 1:湿度目标范围低位 2:湿度目标范围高位
+extern uint16_t Sh[3] = {25,30,80}; // 土壤湿度 0:当前湿度 1:湿度目标范围低位 2:湿度目标范围高位
+extern uint16_t CO2[3] = {25,0,500}; // 二氧化碳 0:当前二氧化碳 1:二氧化碳目标范围低位 2:二氧化碳目标范围高位
+extern uint16_t CH2O[3] = {25,0,500}; //  甲醛 0:当前甲醛 1:甲醛目标范围低位 2:甲醛目标范围高位
+extern uint16_t TVOC[3] = {25,0,500}; // TVOC 0:当前TVOC 1:TVOC目标范围低位 2:TVOC目标范围高位
+extern int fan_status = 0;  //  风扇状态
+extern int fan_goal = 0;  //  风扇目标状态
+extern int light_status = 0;  //  生长灯状态
+extern int light_goal = 0;  //  生长灯目标状态
+extern int waterpump_status = 0; //  水泵状态
+extern int waterpump_goal = 0;  //  水泵目标状态
+extern int water_status = 0;  //  水箱液位
 extern int error_flag = 0;  //系统错误标记 0:为正常值
 
 /* 注册组件对象 */
@@ -42,6 +51,15 @@ void Report_app();
 
 /* 声明一般函数 */
 void Serial_init();
+
+/* 声明功能函数 */
+void Text_Text_info();
+void dataStorage();
+void Debug();
+void Serial_analysis();
+void Serial1_analysis();
+int Serial2_analysis();
+
 
 
 /* 创建多协程任务信息 */
@@ -87,4 +105,6 @@ void loop() {
 /* 串口初始化代码 */
 void Serial_init(){
   Serial.begin(115200);
+  Serial1.begin(115200);
+  Serial2.begin(115200);
 }
