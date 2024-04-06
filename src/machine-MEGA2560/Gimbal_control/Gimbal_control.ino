@@ -15,9 +15,13 @@ const int astepPin = 12;    // a步进控制引脚
 const int x_stopPin = 9;    // x方向限位引脚
 const int y_stopPin = 10;   // y方向限位引脚
 const int z_stopPin = 11;   // z方向限位引脚
+const int controlPin = 52;  // 启动控制引脚
+const int statusPin = 53;   // 状态控制引脚
+const int waterPin = 51;   // 状态控制引脚
 const int x_max = 13950;    // x方向最大步进数
 const int y_max = 15250;    // y方向最大步进数
 const int z_max = 11000;    // z方向最大步进数
+
 
 const int moveSteps = 200;    //测试电机运行使用的运行步数
 
@@ -47,8 +51,24 @@ float y_acc = 1000;
 float z_acc = 1000;
 float a_acc = 1000;
 
+int loop_i = 0;
+int task_enable = 0;
+int task[][3] = {
+  {100,100,11000},
+  {100,4000,11000},
+  {100,15000,11000},
+  {4566,15000,11000},
+  {4566,4000,11000},
+  {9033,4000,11000},
+  {9033,15000,11000},
+  {13500,15000,11000},
+  {13500,4000,11000},
+  {100,100,11000}
+};
+
 // 声明自定义函数
 void stepper_init();
+void IO_init();
 void stepper_calibration();
 void stepper_run();
 
@@ -57,13 +77,34 @@ void stepper_run();
 void setup(){
     Serial.begin(115200);   // 初始化串口通讯
     stepper_init(); //初始化步进电机驱动
+    IO_init(); //初始化IO引脚
     stepper_calibration();  //步进电机自校准坐标系
+    delay(3000);
 }
 
 
 
 void loop(){
     stepper_run();
+    //Serial.print("control:");
+    //Serial.println(digitalRead(controlPin));
+    //Serial.print("status:");
+    //Serial.println(digitalRead(statusPin));
+    
+    
+    if(digitalRead(controlPin) == 0){
+        loop_i++;
+        if(digitalRead(controlPin) == 0 && loop_i == 1000){
+            digitalWrite(statusPin,0);
+            loop_i = 0;
+            task_enable = 1;
+        }
+        if(loop_i == 1000){
+            loop_i = 0;
+        }
+    }
+    if(digitalRead(controlPin) == 1 && task_enable == 1) stepper_task(task,10);
+    
 }
 
 
@@ -105,6 +146,15 @@ void stepper_init(){
     stepperZ.setAcceleration(z_acc);
     stepperA.setMaxSpeed(a_vel);     // 设置A轴最大速度和加速度
     stepperA.setAcceleration(a_acc);  
+}
+
+
+void IO_init(){
+    pinMode(controlPin,INPUT_PULLUP);
+    pinMode(statusPin,OUTPUT);
+    pinMode(waterPin,OUTPUT);
+    digitalWrite(waterPin,HIGH);
+    digitalWrite(statusPin,HIGH);
 }
 
 
@@ -153,7 +203,11 @@ void stepper_calibration(){
             stepperY.run();
             Serial.println("Y move");
         }
-        if(!z_stop){  
+        else if (flag == 1)
+        {
+            flag = 2;
+        }
+        if(!z_stop && flag == 2 ){  
             stepperZ.move(-2000);
             stepperZ.run();
             Serial.println("Z move");
@@ -226,5 +280,56 @@ void stepper_run(){
         stepperZ.run();
         Serial.print("Z电机位置：");
         Serial.println(stepperZ.currentPosition());
+    }
+}
+
+/**
+ *  写入移动坐标函数
+ * 
+ * 该函数用于分别控制X、Y、Z三个方向上的步进电机移动到指定的位置。
+ * 
+ *  x X轴上的移动位置
+ *  y Y轴上的移动位置
+ *  z Z轴上的移动位置
+ */
+void stepper_move(int x,int y,int z){
+  stepperX.moveTo(x);
+  stepperY.moveTo(y);
+  stepperZ.moveTo(z);
+}
+
+
+
+
+/**
+ * 步进任务函数
+ * 该函数用于根据给定的任务数组，控制步进电机执行一系列的位置移动任务。
+ * 每个任务由一个包含 x, y, z 三个位置坐标的数组元素表示。函数会检查当前步进电机的位置，
+ * 如果当前位置与当前任务的目标位置一致，则执行下一个任务点，直到所有任务完成。
+ * 
+ * @param task 一个二维整型数组，每个子数组包含三个整数，分别表示x, y, z方向上的目标位置。
+ * @param row 表示任务数组的行数，即任务点的数量。
+ * 
+ * 注意：该函数需要持续循环以监测当前任务执行状态
+ */
+void stepper_task(int task[][3],int row){
+    int x_pos = stepperX.currentPosition();
+    int y_pos = stepperY.currentPosition();
+    int z_pos = stepperZ.currentPosition();
+    static int task_flag = 0;
+    if (x_pos == task[task_flag][0] && y_pos == task[task_flag][1] && z_pos == task[task_flag][2]) task_flag++;
+    if(task_flag<row){
+    stepper_move(task[task_flag][0],task[task_flag][1],task[task_flag][2]);
+    if(task_flag == 2){
+        digitalWrite(waterPin,LOW);
+    }
+    if(task_flag == row-1){
+        digitalWrite(waterPin,HIGH);
+    }
+    }
+    if(task_flag==row){
+    task_flag = 0;
+    task_enable = 0;
+    digitalWrite(statusPin,HIGH);
     }
 }
