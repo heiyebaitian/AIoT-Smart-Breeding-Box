@@ -7,12 +7,14 @@ void Blinker_actuator_setup(){
 
 void Button_WaterPump_callback(const String & state){
     waterpump_goal = !waterpump_status;
+    Waterpump_control_do();
     Serial_tx();
     Serial_tx();
 }
 
 void Button_Light_callback(const String & state){
     light_goal = !light_status;
+    Waterpump_control_do();
     Serial_tx();
     Serial_tx();
 }

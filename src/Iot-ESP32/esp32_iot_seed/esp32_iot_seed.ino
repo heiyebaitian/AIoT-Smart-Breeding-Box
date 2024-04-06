@@ -12,6 +12,9 @@ char auth[] = "e5663d2da408"; //  此处放置key
 char ssid[] = "LenovoY9000P"; //  此处放置WIFI的SSID
 char pswd[] = "guoxilin"; //  此处放置WIFI的PASSWORD
 
+/* 系统常量 */
+const int controlPin = 1;
+const int statusPin = 2;
 
 /* 系统全局变量 */
 extern uint16_t Temperature[3] = {15,-5,25}; // 温度 0:当前温度 1:温度目标范围低位 2:温度目标范围高位
@@ -75,6 +78,7 @@ Scheduler ts; // 声明协程管理器
 
 void setup() {
     Serial_init();  // 初始化串口
+    IO_init();  // 初始化IO
 
     // DEBUG模式检查及初始化
     #if DEBUG_MODE == 1
@@ -109,7 +113,14 @@ void loop() {
 
 /* 串口初始化代码 */
 void Serial_init(){
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial1.begin(115200);
   Serial2.begin(115200);
+}
+
+/* IO初始化代码 */
+void IO_init(){
+    pinMode(controlPin,OUTPUT);
+    pinMode(statusPin,INPUT_PULLUP);
+    digitalWrite(controlPin,HIGH);
 }

@@ -16,10 +16,11 @@ void Blinker_app(){
 //  串口任务程序
 void Serial_app(){
   Serial_analysis();  // 串口1命令解析
-  Serial_tx();
+  Serial_tx();  //  串口1数据发送
   Serial1_analysis(); //  串口2命令解析
+  Waterpump_status_get(); //  水泵状态获取
   Serial2_analysis(); //  串口3命令解析
-  Serial2_tx();
+  Serial2_tx(); //  串口3数据发送
 }
 
 
@@ -73,6 +74,7 @@ void Autotask_app(){
   if(autotask_flag == 2){
     waterpump_goal = 1;
     Serial_tx();
+    Waterpump_control_do();
     Serial2.print("tasking.n0.val=75\xff\xff\xff");
     autotask_flag++;
     return;
@@ -81,9 +83,9 @@ void Autotask_app(){
 
   if(autotask_flag >= 3){
     Serial_tx();
-    Serial2.print("gm0.aph=0\xff\xff\xff");
-    Serial2.print("t0.txt=\"Mission Complete\"\xff\xff\xff");
-    Serial2.print("b0.txt=\"HOME\"\xff\xff\xff");
+    Serial2.print("tasking.gm0.aph=0\xff\xff\xff");
+    Serial2.print("tasking.t0.txt=\"Mission Complete\"\xff\xff\xff");
+    Serial2.print("tasking.b0.txt=\"HOME\"\xff\xff\xff");
     Serial2.print("tasking.n0.val=100\xff\xff\xff");
     Auto_app_task.disable();
     return;
@@ -305,7 +307,7 @@ void Serial_analysis(){
     if(cash[0] == 0xFF && cash[1] == 0xFE){
         water_status = cash[2]; //  液位传感器状态
         Sh[0] = cash[3];  //  土壤湿度传感器
-        waterpump_status = cash[4]; //  液位传感器状态
+        //waterpump_status = cash[4]; //  水泵状态（已弃用——不再从HT32获取）
         fan_status = cash[5]; //  风扇状态
         light_status = cash[6]; //  生长灯状态
         if(cash[7] == 0x00 && cash[8] == 0x02){
@@ -416,7 +418,7 @@ void Serial2_analysis(){
         }
         if(cash[2] == 0x02){
           if(cash[3] == 0x00) waterpump_goal = 0;
-          else if(cash[3] == 0x01) waterpump_goal = 1;
+          else if(cash[3] == 0x01) Waterpump_control_do();
         }
         Serial_tx();
       }
@@ -429,7 +431,18 @@ void Serial2_analysis(){
   }
 }
 
+/* 水泵状态获取函数 */
+void Waterpump_status_get(){
+  waterpump_status = !digitalRead(statusPin);
+}
 
+void Waterpump_control_do(){
+  if(waterpump_status == 0){
+    digitalWrite(controlPin,LOW);
+    delay(500);
+    digitalWrite(controlPin,HIGH);
+  }
+}
 
 /* 串口1指令发送函数 */
 void Serial_tx(){
