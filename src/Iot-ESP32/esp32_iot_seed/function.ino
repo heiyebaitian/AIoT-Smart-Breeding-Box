@@ -16,8 +16,11 @@ void Blinker_app(){
 //  串口任务程序
 void Serial_app(){
   Serial_analysis();  // 串口1命令解析
+  Serial_tx();  //  串口1数据发送
   Serial1_analysis(); //  串口2命令解析
+  Waterpump_status_get(); //  水泵状态获取
   Serial2_analysis(); //  串口3命令解析
+  Serial2_tx(); //  串口3数据发送
 }
 
 
@@ -43,12 +46,51 @@ void Report_app(){
   Status_Water();
   Report_app_task.delay(DELAY_TS);
   Text_Text_info(); //  为了能正确获取错误信息，请确保此函数最后执行发送数据
-  Serial_tx();
   Debug();
   Report_app_task.delay(DELAY_TS);
 }
 
 
+/* 自动任务程序 */
+void Autotask_app(){
+  if(autotask_flag == 0){
+    light_goal = 1;
+    Serial_tx();
+    Serial2.print("tasking.n0.val=25\xff\xff\xff");
+    autotask_flag++;
+    return;
+  }
+  else light_goal = 0;
+
+  if(autotask_flag == 1){
+    fan_goal = 1;
+    Serial_tx();
+    Serial2.print("tasking.n0.val=50\xff\xff\xff");
+    autotask_flag++;
+    return;
+  }
+  else fan_goal = 0;
+
+  if(autotask_flag == 2){
+    waterpump_goal = 1;
+    Serial_tx();
+    Waterpump_control_do();
+    Serial2.print("tasking.n0.val=75\xff\xff\xff");
+    autotask_flag++;
+    return;
+  }
+  else waterpump_goal = 0;
+
+  if(autotask_flag >= 3){
+    Serial_tx();
+    Serial2.print("tasking.gm0.aph=0\xff\xff\xff");
+    Serial2.print("tasking.t0.txt=\"Mission Complete\"\xff\xff\xff");
+    Serial2.print("tasking.b0.txt=\"HOME\"\xff\xff\xff");
+    Serial2.print("tasking.n0.val=100\xff\xff\xff");
+    Auto_app_task.disable();
+    return;
+  }
+}
 
 
 /* 提示信息回传函数（需要最后执行） */
@@ -254,17 +296,18 @@ uint16_t merge_high_low_bytes(uint8_t high_byte, uint8_t low_byte) {
 
 // 串口1解析器
 void Serial_analysis(){
-  char cash[100]={0}; //串口接收命令存放区
+  char cash[50]={0}; //串口接收命令存放区
   uint16_t length = 0;
   while(Serial.available()>0){ //检查缓冲区是否存在数据
     cash[length++] += char(Serial.read()); //读取缓冲区
     delay(1);      // 延时函数用于等待字符完全进入缓冲区
+    if(length == 27) break;
   }
   if(length == 27){
     if(cash[0] == 0xFF && cash[1] == 0xFE){
         water_status = cash[2]; //  液位传感器状态
         Sh[0] = cash[3];  //  土壤湿度传感器
-        waterpump_status = cash[4]; //  液位传感器状态
+        //waterpump_status = cash[4]; //  水泵状态（已弃用——不再从HT32获取）
         fan_status = cash[5]; //  风扇状态
         light_status = cash[6]; //  生长灯状态
         if(cash[7] == 0x00 && cash[8] == 0x02){
@@ -288,7 +331,7 @@ void Serial1_analysis(){
   String inString ="" ; //串口接收命令存放区
   while(Serial1.available()>0){ //检查缓冲区是否存在数据
     inString += char(Serial1.read()); //读取缓冲区
-    delay(10);      // 延时函数用于等待字符完全进入缓冲区
+    delay(1);      // 延时函数用于等待字符完全进入缓冲区
   }
 
 
@@ -298,16 +341,17 @@ void Serial1_analysis(){
 
 
 // 串口3解析器
-int Serial2_analysis(){
-  char cash[50]; //串口接收命令存放区
+void Serial2_analysis(){
+  char cash[50]={0}; //串口接收命令存放区
   uint16_t length = 0;
   while(Serial2.available()>0){ //检查缓冲区是否存在数据
     cash[length++] += char(Serial2.read()); //读取缓冲区
-    delay(10);      // 延时函数用于等待字符完全进入缓冲区
+    delay(1);      // 延时函数用于等待字符完全进入缓冲区
+    if(length == 50) break;
   }
 
-  if(length<=3) return -1; //如果接收的数据长度不足或等于3，则一定不包含末尾3个0xFF结束标记，直接返回错误-1
-  if(cash[length-1]!=0xFF || cash[length-2]!=0xFF || cash[length-3]!=0xFF) return -1; //如果接收的数据末尾三个字节不是0xFF，则一定不是正确的命令，直接返回错误-1
+  if(length<=3) return;
+  if(cash[length-1]!=0xFF || cash[length-2]!=0xFF || cash[length-3]!=0xFF) return;
 
   if(length>0){
 
@@ -318,10 +362,7 @@ int Serial2_analysis(){
 
       }
 
-      /* BOOT就绪报告 */
-      if(cash[0] == 0x00){
-        Serial2.print("mcu_status=1");  //  将状态置1完成启动
-      }
+
     }
 
     /* 指令长度5 */
@@ -329,6 +370,7 @@ int Serial2_analysis(){
       /* 页面ID报告 */
       if(cash[0]==0x01){
         pageid = cash[1]; //  将页面ID赋值
+        Serial2.print("mcu_status=1\xff\xff\xff");
       }
     }
 
@@ -336,18 +378,49 @@ int Serial2_analysis(){
     if(length == 6){
       /* 遇到错误自动重启屏幕 */
       if(cash[0]==0xEE && cash[1]==0xEE && cash[2]==0xEE){
-        Serial2.print("rest");
+        Serial2.print("rest\xff\xff\xff");
       }
+
+      /* BOOT就绪报告 */
+      if(cash[0] == 0x00 && cash[1] == 0x00 && cash[2] == 0x00){
+        Serial2.print("mcu_status=1\xff\xff\xff");  //  将状态置1完成启动
+      }
+
+      /* 自动任务触发报告 */
+        if(cash[0] == 0x05 && cash[1] == 0x00 && cash[2] == 0x01){
+          autotask_flag = 0;
+          Serial2.print("mcu_status=1\xff\xff\xff");
+          Auto_app_task.enable();
+        }
+        if(cash[0] == 0x05 && cash[1] == 0x00 && cash[2] == 0x00){
+          Serial2.print("mcu_status=1\xff\xff\xff");
+          Auto_app_task.disable();
+        }
+      
     }
 
     /* 指令长度7 */
     if(length == 7){
       /* 一般按钮触发报告 */
       if(cash[0] == 0x02 && cash[1] == pageid){
+
       }
 
       /* 双态按钮触发报告 */
       if(cash[0] == 0x03 && cash[1] == pageid){
+        if(cash[2] == 0x00){
+          if(cash[3] == 0x00) fan_goal = 0;
+          else if(cash[3] == 0x01) fan_goal = 1;
+        }
+        if(cash[2] == 0x01){
+          if(cash[3] == 0x00) light_goal = 0;
+          else if(cash[3] == 0x01) light_goal = 1;
+        }
+        if(cash[2] == 0x02){
+          if(cash[3] == 0x00) waterpump_goal = 0;
+          else if(cash[3] == 0x01) Waterpump_control_do();
+        }
+        Serial_tx();
       }
 
       /* 滑动条报告 */
@@ -358,12 +431,22 @@ int Serial2_analysis(){
   }
 }
 
+/* 水泵状态获取函数 */
+void Waterpump_status_get(){
+  waterpump_status = !digitalRead(statusPin);
+}
 
+void Waterpump_control_do(){
+  if(waterpump_status == 0){
+    digitalWrite(controlPin,LOW);
+    delay(500);
+    digitalWrite(controlPin,HIGH);
+  }
+}
 
 /* 串口1指令发送函数 */
 void Serial_tx(){
   Serial.printf("%c",0xFF);
-  Serial.printf("%c",0xFE);
   Serial.printf("%c",0x00);
   if(waterpump_status != waterpump_goal) Serial.printf("%c",waterpump_goal);
   else Serial.printf("%c",waterpump_status);
@@ -371,4 +454,44 @@ void Serial_tx(){
   else Serial.printf("%c",fan_status);
   if(light_status != light_goal) Serial.printf("%c",light_goal);
   else Serial.printf("%c",light_status);
+}
+
+
+/* 串口2指令发送函数 */
+void  Serial2_tx(){
+
+  /* 如果页面ID为6 则为env_mon页面
+  *  发送传感器数据给屏幕
+  */
+  if(pageid == 0x06){
+    Serial2.print("n0.val=");
+    Serial2.print(Temperature[0]);  // 温度
+    Serial2.print("\xff\xff\xff");
+    Serial2.print("n1.val=");
+    Serial2.print(Humidity[0]); // 湿度
+    Serial2.print("\xff\xff\xff");
+    Serial2.print("n2.val=");
+    Serial2.print(Sh[0]); // 土壤湿度
+    Serial2.print("\xff\xff\xff");
+    Serial2.print("n3.val=");
+    Serial2.print(CO2[0]);  // 二氧化碳
+    Serial2.print("\xff\xff\xff");
+  }
+
+  /* 如果页面ID为7 则为fun_con页面
+  *  发送执行器状态给屏幕
+  */
+  if(pageid == 0x07){
+    Serial2.print("bt0.val=");
+    Serial2.print(fan_status);
+    Serial2.print("\xff\xff\xff");
+    Serial2.print("bt1.val=");
+    Serial2.print(light_status);
+    Serial2.print("\xff\xff\xff");
+    Serial2.print("bt2.val=");
+    Serial2.print(waterpump_status);
+    Serial2.print("\xff\xff\xff");
+    Serial2.print("bt3.val=0\xff\xff\xff");
+    Serial2.print("bt4.val=0\xff\xff\xff");
+  }
 }

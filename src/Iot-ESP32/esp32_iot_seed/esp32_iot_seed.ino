@@ -12,9 +12,12 @@ char auth[] = "e5663d2da408"; //  此处放置key
 char ssid[] = "LenovoY9000P"; //  此处放置WIFI的SSID
 char pswd[] = "guoxilin"; //  此处放置WIFI的PASSWORD
 
+/* 系统常量 */
+const int controlPin = 1;
+const int statusPin = 2;
 
 /* 系统全局变量 */
-extern float Temperature[3] = {15,-5,25}; // 温度 0:当前温度 1:温度目标范围低位 2:温度目标范围高位
+extern uint16_t Temperature[3] = {15,-5,25}; // 温度 0:当前温度 1:温度目标范围低位 2:温度目标范围高位
 extern uint16_t Humidity[3] = {20,30,80}; // 湿度 0:当前湿度 1:湿度目标范围低位 2:湿度目标范围高位
 extern uint16_t Sh[3] = {25,30,80}; // 土壤湿度 0:当前湿度 1:湿度目标范围低位 2:湿度目标范围高位
 extern uint16_t CO2[3] = {25,0,500}; // 二氧化碳 0:当前二氧化碳 1:二氧化碳目标范围低位 2:二氧化碳目标范围高位
@@ -27,7 +30,9 @@ extern int light_goal = 0;  //  生长灯目标状态
 extern int waterpump_status = 0; //  水泵状态
 extern int waterpump_goal = 0;  //  水泵目标状态
 extern int water_status = 0;  //  水箱液位
+extern int autotask_flag = 0;  //自动任务标记
 extern int error_flag = 0;  //系统错误标记 0:为正常值
+
 
 /* 注册组件对象 */
 BlinkerButton Button_WaterPump("btn-wp"); //  水泵开关
@@ -48,6 +53,7 @@ BlinkerText Text_info("tex-info"); // 文本提示组件
 void Blinker_app();
 void Serial_app();
 void Report_app();
+void Autotask_app();
 
 /* 声明一般函数 */
 void Serial_init();
@@ -58,7 +64,7 @@ void dataStorage();
 void Debug();
 void Serial_analysis();
 void Serial1_analysis();
-int Serial2_analysis();
+void Serial2_analysis();
 
 
 
@@ -66,11 +72,13 @@ int Serial2_analysis();
 Task Blink_app_task(TASK_IMMEDIATE,TASK_FOREVER,&Blinker_app);
 Task Serial_app_task(TASK_IMMEDIATE,TASK_FOREVER,&Serial_app);  // 创建任务 串口任务  任务间隔0ms 任务次数：始终
 Task Report_app_task(10000,TASK_FOREVER,&Report_app); // 创建任务 回报任务 任务间隔10s 任务次数：始终
+Task Auto_app_task(60000,TASK_FOREVER,&Autotask_app);  // 创建任务 自动任务 任务间隔60s 任务次数：始终
 Scheduler ts; // 声明协程管理器
 
 
 void setup() {
     Serial_init();  // 初始化串口
+    IO_init();  // 初始化IO
 
     // DEBUG模式检查及初始化
     #if DEBUG_MODE == 1
@@ -90,6 +98,7 @@ void setup() {
     ts.addTask(Blink_app_task);//将 Blink_app_task 装载到任务管理器
     ts.addTask(Serial_app_task);//将 Serial_app_task 装载到任务管理器
     ts.addTask(Report_app_task);//将 Report_app_task 装载到任务管理器
+    ts.addTask(Auto_app_task);//将 Auto_app_task 装载到任务管理器
 
     //启动任务
     Blink_app_task.enable(); //启动 Blink_app_task 任务
@@ -104,7 +113,14 @@ void loop() {
 
 /* 串口初始化代码 */
 void Serial_init(){
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial1.begin(115200);
   Serial2.begin(115200);
+}
+
+/* IO初始化代码 */
+void IO_init(){
+    pinMode(controlPin,OUTPUT);
+    pinMode(statusPin,INPUT_PULLUP);
+    digitalWrite(controlPin,HIGH);
 }
