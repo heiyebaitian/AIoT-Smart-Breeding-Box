@@ -310,7 +310,7 @@ void Serial_analysis(){
         //waterpump_status = cash[4]; //  水泵状态（已弃用——不再从HT32获取）
         fan_status = cash[5]; //  风扇状态
         light_status = cash[6]; //  生长灯状态
-        if(cash[7] == 0x00 && cash[8] == 0x02){
+        if(cash[7] == 0x3C && cash[8] == 0x02){
           CO2[0] = merge_high_low_bytes(cash[9],cash[10]);  //  CO2数值
           CH2O[0] = merge_high_low_bytes(cash[11],cash[12]);  //  甲醛数值
           TVOC[0] = merge_high_low_bytes(cash[13],cash[14]);  //  TVOC数值
@@ -447,6 +447,7 @@ void Waterpump_control_do(){
 /* 串口1指令发送函数 */
 void Serial_tx(){
   Serial.printf("%c",0xFF);
+  Serial.printf("%c",0xFE);
   Serial.printf("%c",0x00);
   if(waterpump_status != waterpump_goal) Serial.printf("%c",waterpump_goal);
   else Serial.printf("%c",waterpump_status);
