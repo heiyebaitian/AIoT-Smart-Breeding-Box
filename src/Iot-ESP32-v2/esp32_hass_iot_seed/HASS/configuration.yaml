@@ -1,0 +1,286 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+mqtt:
+# 传感器
+  sensor:
+# 常态化培养区气体传感器
+    - name: "常态化培养区-温度"
+      state_topic: "esp32/normalization/sensor1"
+      suggested_display_precision: 1
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json.temperature }}"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00001
+
+    - name: "常态化培养区-湿度"
+      state_topic: "esp32/normalization/sensor1"
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.humidity }}"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00002
+
+    - name: "常态化培养区-CO2"
+      state_topic: "esp32/normalization/sensor1"
+      unit_of_measurement: "ppm"
+      value_template: "{{ value_json.CO2 }}"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00003
+
+    - name: "常态化培养区-CH2O"
+      state_topic: "esp32/normalization/sensor1"
+      unit_of_measurement: "ug/m³"
+      value_template: "{{ value_json.CH2O }}"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00004
+
+    - name: "常态化培养区-TVOC"
+      state_topic: "esp32/normalization/sensor1"
+      unit_of_measurement: "ug/m³"
+      value_template: "{{ value_json.TVOC }}"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00005
+
+    - name: "常态化培养区-土壤湿度"
+      state_topic: "esp32/normalization/sensor1"
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.sh }}"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00010
+
+
+
+
+# 差异化培养区气体传感器
+    - name: "差异化培养区-温度"
+      state_topic: "esp32/differentiation/sensor1"
+      suggested_display_precision: 1
+      unit_of_measurement: "°C"
+      value_template: "{{ value_json.temperature }}"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10001
+
+    - name: "差异化培养区-湿度"
+      state_topic: "esp32/differentiation/sensor1"
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.humidity }}"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10002  
+
+    - name: "差异化培养区-CO2"
+      state_topic: "esp32/differentiation/sensor1"
+      unit_of_measurement: "ppm"
+      value_template: "{{ value_json.CO2 }}"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10003
+
+    - name: "差异化培养区-CH2O"
+      state_topic: "esp32/differentiation/sensor1"
+      unit_of_measurement: "ug/m³"
+      value_template: "{{ value_json.CH2O }}"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10004
+
+    - name: "差异化培养区-TVOC"
+      state_topic: "esp32/differentiation/sensor1"
+      unit_of_measurement: "ug/m³"
+      value_template: "{{ value_json.TVOC }}"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10005
+
+    - name: "差异化培养区-土壤湿度"
+      state_topic: "esp32/differentiation/sensor1"
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.sh }}"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10010
+
+# 水箱液位
+    - name: "水箱液位"
+      state_topic: "esp32/mechanical_arm/water"
+      unit_of_measurement: "%"
+      value_template: "{{ value_json.water }}"
+      availability:
+        - topic: "esp32/mechanical_arm/state"
+      unique_id: 30002
+
+# 育种箱网络状态
+    - name: "设备WIFI RSSI"
+      state_topic: "esp32/system/wifi"
+      unit_of_measurement: "dBm"
+      value_template: "{{ value_json.RSSI }}"
+      availability:
+        - topic: "esp32/state"
+      unique_id: 40001
+
+
+# 二元传感器
+  binary_sensor:
+# 滴灌系统水泵状态指示
+    - name: "滴灌系统水泵"
+      state_topic: "esp32/mechanical_arm/pump"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/mechanical_arm/state"
+      unique_id: 30001
+
+
+# 拨动开关
+  switch:
+# 常态化培养区风扇通风系统
+    - name: "常态化培养区-通风系统"
+      state_topic: "esp32/normalization/fans"
+      command_topic: "esp32/normalization/fans"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00006
+
+# 常态化培养区制冷系统
+    - name: "常态化培养区-制冷系统"
+      state_topic: "esp32/normalization/refrigeration"
+      command_topic: "esp32/normalization/refrigeration"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00007
+
+# 常态化培养区制热系统
+    - name: "常态化培养区-制热系统"
+      state_topic: "esp32/normalization/heating"
+      command_topic: "esp32/normalization/heating"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00008
+
+# 常态化培养区光照系统
+    - name: "常态化培养区-光照系统"
+      state_topic: "esp32/normalization/light"
+      command_topic: "esp32/normalization/light"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/normalization/state"
+      unique_id: 00009
+
+
+
+
+# 差异化培养区风扇通风系统
+    - name: "差异化培养区-通风系统"
+      state_topic: "esp32/differentiation/fans"
+      command_topic: "esp32/differentiation/fans"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10006
+
+# 差异化培养区制冷系统
+    - name: "差异化培养区-制冷系统"
+      state_topic: "esp32/differentiation/refrigeration"
+      command_topic: "esp32/differentiation/refrigeration"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10007
+
+# 差异化培养区制热系统
+    - name: "差异化培养区-制热系统"
+      state_topic: "esp32/differentiation/heating"
+      command_topic: "esp32/differentiation/heating"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10008
+
+# 差异化培养区光照系统
+    - name: "差异化培养区-光照系统"
+      state_topic: "esp32/differentiation/light"
+      command_topic: "esp32/differentiation/light"
+      payload_on: "ON"
+      payload_off: "OFF"
+      availability:
+        - topic: "esp32/differentiation/state"
+      unique_id: 10009
+
+
+
+
+
+
+  text:
+# DEBUG日志显示（command_topic可以回显内容，但是本功能用不到，故发送到黑洞）
+      name: "DEBUG LOG"
+      mode: "text"
+      command_topic: "esp32/blackhole"
+      state_topic: "esp32/system/debug"
+      availability:
+        - topic: "esp32/state"
+      min: 1
+      max: 255
+      unique_id: 40002
+
+# 控制指令通知通道
+  notify:
+      name: "育种箱控制指令通知通道"
+      command_topic: "esp32/system/control"
+      availability:
+        - topic: "esp32/state"
+      qos: 0
+      retain: false
+      unique_id: 90002
+
+
+
+
+  select:
+    command_topic: "esp32/test"
+    name: "Test Select"
+    options:
+      - "Option 1"
+      - "Option 2"
+
+  button:
+      unique_id: bedroom_switch_reboot_btn
+      name: "Restart Bedroom Switch"
+      command_topic: "home/bedroom/switch1/commands"
+      payload_press: "restart"
+      qos: 0
+      retain: false
+      entity_category: "config"
+      device_class: "restart"
+
+
+
+# 启用主题切换
+frontend:
+  themes: !include_dir_merge_named themes
