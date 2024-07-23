@@ -9,7 +9,7 @@
 
 
 
-extern const int DEBUG_MODE;
+extern const bool DEBUG_MODE;
 
 /* WiFi相关配置信息 */
 extern const char *wifi_ssid;
@@ -38,8 +38,7 @@ extern PubSubClient mqttClient;
 
 
 
-extern void disable_iot_data_upload();
-extern void enable_iot_data_upload();
+
 void wifi_setup();
 void mqtt_setup();
 void mqtt_subscribe_setup();
@@ -47,6 +46,7 @@ void mqtt_callback(char *topic, byte *payload, unsigned int length);
 void setup_iot_server();
 void connect_check();
 void hass_debug_log(char *log);
+
 
 
 #endif //MQTT_DRIVER_H
