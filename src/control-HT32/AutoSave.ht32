@@ -1,0 +1,3618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ControlsInfo>
+  <summary>
+    <version>1.00</version>
+    <core>M0+</core>
+    <mcu>HT32F52352</mcu>
+    <package>LQFP64</package>
+  </summary>
+  <tabPageADC>visiable</tabPageADC>
+  <tabPageUART>visiable</tabPageUART>
+  <AFIO>
+    <index0>3</index0>
+    <index1>1</index1>
+    <index2>7</index2>
+    <index3>7</index3>
+    <index4>7</index4>
+    <index5>7</index5>
+    <index6>1</index6>
+    <index7>1</index7>
+    <index8>1</index8>
+    <index9>1</index9>
+    <index10>1</index10>
+    <index11>1</index11>
+    <index12>1</index12>
+    <index13>1</index13>
+    <index14>1</index14>
+    <index15>1</index15>
+    <index16>1</index16>
+    <index17>1</index17>
+    <index18>1</index18>
+    <index19>1</index19>
+    <index20>1</index20>
+    <index21>1</index21>
+    <index22>1</index22>
+    <index23>1</index23>
+    <index24>1</index24>
+    <index25>1</index25>
+    <index26>1</index26>
+    <index27>1</index27>
+    <index28>1</index28>
+    <index29>1</index29>
+    <index30>1</index30>
+    <index31>1</index31>
+    <index32>1</index32>
+    <index33>1</index33>
+    <index34>1</index34>
+    <index35>1</index35>
+    <index36>1</index36>
+    <index37>1</index37>
+    <index38>1</index38>
+    <index39>1</index39>
+    <index40>1</index40>
+    <index41>1</index41>
+    <index42>1</index42>
+    <index43>1</index43>
+    <index44>1</index44>
+    <index45>1</index45>
+    <index46>1</index46>
+    <index47>1</index47>
+    <index48>1</index48>
+    <index49>1</index49>
+    <index50>1</index50>
+    <index51>1</index51>
+    <index52>1</index52>
+    <index53>1</index53>
+    <index54>1</index54>
+    <index55>1</index55>
+    <index56>1</index56>
+    <index57>1</index57>
+    <index58>1</index58>
+    <index59>1</index59>
+    <index60>1</index60>
+    <index61>1</index61>
+    <index62>1</index62>
+    <index63>1</index63>
+    <index64>1</index64>
+    <index65>1</index65>
+  </AFIO>
+  <GPIO>
+    <row0>
+      <column0>1</column0>
+      <column1>PA0</column1>
+      <column2>Input</column2>
+      <column3>Enable</column3>
+      <column4>Pull Up</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row0>
+    <row1>
+      <column0>2</column0>
+      <column1>PA1</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row1>
+    <row2>
+      <column0>3</column0>
+      <column1>PA2</column1>
+      <column2>Output</column2>
+      <column3>Disable</column3>
+      <column4>Pull Up</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row2>
+    <row3>
+      <column0>4</column0>
+      <column1>PA3</column1>
+      <column2>Input</column2>
+      <column3>Enable</column3>
+      <column4>Pull Up</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row3>
+    <row4>
+      <column0>5</column0>
+      <column1>PA4</column1>
+      <column2>Output</column2>
+      <column3>Disable</column3>
+      <column4>Pull Up</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row4>
+    <row5>
+      <column0>6</column0>
+      <column1>PA5</column1>
+      <column2>Input</column2>
+      <column3>Enable</column3>
+      <column4>Pull Up</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row5>
+    <row6>
+      <column0>7</column0>
+      <column1>PA6</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row6>
+    <row7>
+      <column0>8</column0>
+      <column1>PA7</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row7>
+    <row8>
+      <column0>9</column0>
+      <column1>VDD_4</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row8>
+    <row9>
+      <column0>10</column0>
+      <column1>VSS_4</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row9>
+    <row10>
+      <column0>11</column0>
+      <column1>PC4</column1>
+      <column2>Output</column2>
+      <column3>Disable</column3>
+      <column4>Pull Up</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row10>
+    <row11>
+      <column0>12</column0>
+      <column1>PC5</column1>
+      <column2>Output</column2>
+      <column3>Disable</column3>
+      <column4>Pull Up</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row11>
+    <row12>
+      <column0>13</column0>
+      <column1>PC8</column1>
+      <column2>Output</column2>
+      <column3>Disable</column3>
+      <column4>Pull Up</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row12>
+    <row13>
+      <column0>14</column0>
+      <column1>PC9</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>Pull Up</column4>
+      <column5>High</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row13>
+    <row14>
+      <column0>15</column0>
+      <column1>PC6</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row14>
+    <row15>
+      <column0>15</column0>
+      <column1>USBDM</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row15>
+    <row16>
+      <column0>16</column0>
+      <column1>USBDP</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row16>
+    <row17>
+      <column0>16</column0>
+      <column1>PC7</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row17>
+    <row18>
+      <column0>17</column0>
+      <column1>CLDO</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row18>
+    <row19>
+      <column0>18</column0>
+      <column1>VDD_1</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row19>
+    <row20>
+      <column0>19</column0>
+      <column1>VSS_1</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row20>
+    <row21>
+      <column0>20</column0>
+      <column1>nRST</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row21>
+    <row22>
+      <column0>21</column0>
+      <column1>VBAT</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row22>
+    <row23>
+      <column0>22</column0>
+      <column1>PB10</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row23>
+    <row24>
+      <column0>23</column0>
+      <column1>PB11</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row24>
+    <row25>
+      <column0>24</column0>
+      <column1>PB12</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row25>
+    <row26>
+      <column0>25</column0>
+      <column1>PD0</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row26>
+    <row27>
+      <column0>26</column0>
+      <column1>PB13</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row27>
+    <row28>
+      <column0>27</column0>
+      <column1>PB14</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row28>
+    <row29>
+      <column0>28</column0>
+      <column1>PB15</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row29>
+    <row30>
+      <column0>29</column0>
+      <column1>PC0</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row30>
+    <row31>
+      <column0>30</column0>
+      <column1>PC10</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row31>
+    <row32>
+      <column0>31</column0>
+      <column1>PC11</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row32>
+    <row33>
+      <column0>32</column0>
+      <column1>PC12</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row33>
+    <row34>
+      <column0>33</column0>
+      <column1>PC13</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row34>
+    <row35>
+      <column0>34</column0>
+      <column1>PA8</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row35>
+    <row36>
+      <column0>35</column0>
+      <column1>PA9</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row36>
+    <row37>
+      <column0>36</column0>
+      <column1>PA10</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row37>
+    <row38>
+      <column0>37</column0>
+      <column1>PA11</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row38>
+    <row39>
+      <column0>38</column0>
+      <column1>PA12</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row39>
+    <row40>
+      <column0>39</column0>
+      <column1>PA13</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row40>
+    <row41>
+      <column0>40</column0>
+      <column1>PA14</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row41>
+    <row42>
+      <column0>41</column0>
+      <column1>PA15</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row42>
+    <row43>
+      <column0>42</column0>
+      <column1>VDD_2</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row43>
+    <row44>
+      <column0>43</column0>
+      <column1>VSS_2</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row44>
+    <row45>
+      <column0>44</column0>
+      <column1>PB0</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row45>
+    <row46>
+      <column0>45</column0>
+      <column1>PB1</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row46>
+    <row47>
+      <column0>46</column0>
+      <column1>PD1</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row47>
+    <row48>
+      <column0>47</column0>
+      <column1>PD2</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row48>
+    <row49>
+      <column0>48</column0>
+      <column1>PD3</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row49>
+    <row50>
+      <column0>49</column0>
+      <column1>PB2</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row50>
+    <row51>
+      <column0>50</column0>
+      <column1>PB3</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row51>
+    <row52>
+      <column0>51</column0>
+      <column1>PB4</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row52>
+    <row53>
+      <column0>52</column0>
+      <column1>PB5</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row53>
+    <row54>
+      <column0>53</column0>
+      <column1>PC14</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row54>
+    <row55>
+      <column0>54</column0>
+      <column1>PC15</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row55>
+    <row56>
+      <column0>55</column0>
+      <column1>VDD_3</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row56>
+    <row57>
+      <column0>56</column0>
+      <column1>VSS_3</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row57>
+    <row58>
+      <column0>57</column0>
+      <column1>PC1</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row58>
+    <row59>
+      <column0>58</column0>
+      <column1>PC2</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row59>
+    <row60>
+      <column0>59</column0>
+      <column1>PC3</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row60>
+    <row61>
+      <column0>60</column0>
+      <column1>PB6</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row61>
+    <row62>
+      <column0>61</column0>
+      <column1>PB7</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row62>
+    <row63>
+      <column0>62</column0>
+      <column1>PB8</column1>
+      <column2>Input</column2>
+      <column3>Disable</column3>
+      <column4>No Pull</column4>
+      <column5>Low</column5>
+      <column6>Disable</column6>
+      <column7>4mA</column7>
+    </row63>
+    <row64>
+      <column0>63</column0>
+      <column1>VDDA</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row64>
+    <row65>
+      <column0>64</column0>
+      <column1>VSSA</column1>
+      <column2></column2>
+      <column3></column3>
+      <column4></column4>
+      <column5></column5>
+      <column6></column6>
+      <column7></column7>
+    </row65>
+  </GPIO>
+  <EXTI>
+    <row0>
+      <column0>1</column0>
+      <column1>EXTI0</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row0>
+    <row1>
+      <column0>2</column0>
+      <column1>EXTI1</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row1>
+    <row2>
+      <column0>3</column0>
+      <column1>EXTI2</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row2>
+    <row3>
+      <column0>4</column0>
+      <column1>EXTI3</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row3>
+    <row4>
+      <column0>5</column0>
+      <column1>EXTI4</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row4>
+    <row5>
+      <column0>6</column0>
+      <column1>EXTI5</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row5>
+    <row6>
+      <column0>7</column0>
+      <column1>EXTI6</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row6>
+    <row7>
+      <column0>8</column0>
+      <column1>EXTI7</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row7>
+    <row8>
+      <column0>9</column0>
+      <column1>EXTI8</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row8>
+    <row9>
+      <column0>10</column0>
+      <column1>EXTI9</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row9>
+    <row10>
+      <column0>11</column0>
+      <column1>EXTI10</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row10>
+    <row11>
+      <column0>12</column0>
+      <column1>EXTI11</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row11>
+    <row12>
+      <column0>13</column0>
+      <column1>EXTI12</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row12>
+    <row13>
+      <column0>14</column0>
+      <column1>EXTI13</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row13>
+    <row14>
+      <column0>15</column0>
+      <column1>EXTI14</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row14>
+    <row15>
+      <column0>16</column0>
+      <column1>EXTI15</column1>
+      <column2></column2>
+      <column3>Interrupt</column3>
+      <column4>POSITIVE_EDGE</column4>
+      <column5>0</column5>
+      <column6>HIGH_LEVEL</column6>
+    </row15>
+  </EXTI>
+  <control name="groupBoxMisc">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxRand">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxSWDIV">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxLVD">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxLVDlevel">
+    <enable>false</enable>
+    <value>LVDS_2V25</value>
+  </control>
+  <control name="labelLVDlevel">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxEnableBOR">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxEnableLVD">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxUSB">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxEnableUSB">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="comboBoxUSBClass">
+    <enable>false</enable>
+    <value>HID Vendor Class</value>
+  </control>
+  <control name="labelUSBClass">
+    <enable>false</enable>
+  </control>
+  <control name="groupBoxClock">
+    <enable>true</enable>
+  </control>
+  <control name="labelCPUFreq4">
+    <enable>true</enable>
+  </control>
+  <control name="labelCPUFreq3">
+    <enable>true</enable>
+  </control>
+  <control name="labelCPUFreq2">
+    <enable>true</enable>
+  </control>
+  <control name="labelCPUFreq1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxClockDivider">
+    <enable>true</enable>
+    <value>1</value>
+  </control>
+  <control name="comboBoxPLLNO2">
+    <enable>true</enable>
+    <value>1</value>
+  </control>
+  <control name="labelClockDivider">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxPLLNF2">
+    <enable>true</enable>
+    <value>6</value>
+  </control>
+  <control name="labelPLLNO2">
+    <enable>true</enable>
+  </control>
+  <control name="labelPLLNF2Err">
+    <enable>true</enable>
+  </control>
+  <control name="labelPLLNF2">
+    <enable>true</enable>
+  </control>
+  <control name="labelHSE">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxHSE">
+    <enable>true</enable>
+    <value>8</value>
+  </control>
+  <control name="checkBoxHSE">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxPLL">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxLSE">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxRTC">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxRTCPrescaler">
+    <enable>false</enable>
+    <value>RTC_RPRE_32768</value>
+  </control>
+  <control name="labelRTCPrescaler">
+    <enable>false</enable>
+  </control>
+  <control name="comboBoxRTCClockSource">
+    <enable>false</enable>
+    <value>LSI</value>
+  </control>
+  <control name="labelRTCClockSource">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxRTCInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxRTCCalendar">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxRTCEnable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxBFTM1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxBFTM1CycleTime">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxBFTM1CycleTime">
+    <enable>false</enable>
+    <value>100</value>
+  </control>
+  <control name="labelBFTM1CycleTime">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxBFTM1Int">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxBFTM1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxCRC">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxCRCMode">
+    <enable>false</enable>
+    <value>CRC-16</value>
+  </control>
+  <control name="labelCRCMode">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxCRCEnable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxTICK">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxTICKCycleTime">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxTICKCycleTime">
+    <enable>false</enable>
+    <value>1</value>
+  </control>
+  <control name="labelTICKCycleTime">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxTICKInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxTICKEnable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxBFTM0">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxBFTM0CycleTime">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxBFTM0CycleTime">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelBFTM0CycleTime">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxBFTM0Int">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxBFTM0Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxWDT">
+    <enable>true</enable>
+  </control>
+  <control name="labelWDTHaltMode">
+    <enable>false</enable>
+  </control>
+  <control name="labelWDTReload">
+    <enable>false</enable>
+  </control>
+  <control name="labelWDTPrescaler">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxWDTReset">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="comboBoxWDTHaltMode">
+    <enable>false</enable>
+    <value>Halt in Sleep &amp; DeepSleep1</value>
+  </control>
+  <control name="comboBoxWDTPrescaler">
+    <enable>false</enable>
+    <value>CK_WDT / 32</value>
+  </control>
+  <control name="textBoxWDTReload">
+    <enable>false</enable>
+    <value>2000</value>
+  </control>
+  <control name="checkBoxWDTEnable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxADCCycleInt">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxADCSubgroupInt">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxADCSingleInt">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="comboBoxADCClockPrescaler">
+    <enable>true</enable>
+    <value>CKCU_ADCPRE_DIV64</value>
+  </control>
+  <control name="comboBoxADCConvertMode">
+    <enable>true</enable>
+    <value>ONE_SHOT_MODE</value>
+  </control>
+  <control name="textBoxADCSamplingTime">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="labelADCClockPrescaler">
+    <enable>true</enable>
+  </control>
+  <control name="labelADCConvertMode">
+    <enable>true</enable>
+  </control>
+  <control name="labelADCSamplingTime">
+    <enable>true</enable>
+  </control>
+  <control name="groupBoxADCGroup2">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel27">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel27">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel26">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel26">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel25">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel25">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel24">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel24">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel23">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel23">
+    <enable>true</enable>
+  </control>
+  <control name="labelADCSeqSel22">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel22">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel21">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel21">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel20">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel20">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="groupBoxADCGroup1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel7">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel7">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel6">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel6">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel5">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel5">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel4">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel4">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel3">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel3">
+    <enable>true</enable>
+  </control>
+  <control name="labelADCSeqSel2">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel2">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel1">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelADCSeqSel0">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxADCSeqSel0">
+    <enable>true</enable>
+    <value>ADC_IN0</value>
+  </control>
+  <control name="checkBoxCMPEnableFallingDtc">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxCMPEnableRisingDtc">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxCMPEnableFallingInt">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxCMPEnableRisingInt">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="textBoxCMPCVRVAL">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="labelCMPSpeed">
+    <enable>true</enable>
+  </control>
+  <control name="labelCMPHysteresis">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxCMPSpeed">
+    <enable>true</enable>
+    <value>Low speed</value>
+  </control>
+  <control name="comboBoxCMPHysteresis">
+    <enable>true</enable>
+    <value>00: No</value>
+  </control>
+  <control name="groupBoxCMPSYNCSEL">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonCMPSYNCSEL1">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonCMPSYNCSEL0">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxCMPPOL">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonCMPPOL1">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonCMPPOL0">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxCMPINSEL">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonCMPCVREF">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonCMPCN">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxCMPCVREN">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxCMPCVROE">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxCMPCVRSS">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonCMPVREF">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonCMPVDDA">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="labelCMPCVRVAL">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxCMPOutput">
+    <enable>true</enable>
+    <value>000: No selection</value>
+  </control>
+  <control name="labelCMPOutput">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxCMPWAKEUP">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="pictureBoxCMP0">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxCMP1EnableFallingDtc">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxCMP1EnableRisingDtc">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxCMP1EnableFallingInt">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxCMP1EnableRisingInt">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="textBoxCMP1CVRVAL">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="labelCMP1Speed">
+    <enable>true</enable>
+  </control>
+  <control name="labelCMP1Hysteresis">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxCMP1Speed">
+    <enable>true</enable>
+    <value>Low speed</value>
+  </control>
+  <control name="comboBoxCMP1Hysteresis">
+    <enable>true</enable>
+    <value>00: No</value>
+  </control>
+  <control name="groupBoxCMP1SYNCSEL">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonCMP1SYNCSEL1">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonCMP1SYNCSEL0">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxCMP1POL">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonCMP1POL1">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonCMP1POL0">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxCMP1INSEL">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonCMP1CVREF">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonCMP1CN">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxCMP1CVREN">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxCMP1CVROE">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxCMP1CVRSS">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonCMP1VREF">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonCMP1VDDA">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="labelCMP1CVRVAL">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxCMP1Output">
+    <enable>true</enable>
+    <value>000: No selection</value>
+  </control>
+  <control name="labelCMP1Output">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxCMP1WAKEUP">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="pictureBoxCMP1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonGPTM0Mode3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="labelGPTM0Note2">
+    <enable>true</enable>
+  </control>
+  <control name="labelGPTM0Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonGPTM0Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxGPTM0Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxGPTM0Mode1Cycle">
+    <enable>true</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxGPTM0Mode1Cycle">
+    <enable>true</enable>
+    <value>10</value>
+  </control>
+  <control name="labelGPTM0Mode1Cycle">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxGPTM0Mode1EnableInt">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxGPTM0Mode1Enable">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="radioButtonGPTM0Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxGPTM0Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM0Mode2Duty3">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM0Mode2Duty2">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM0Mode2Precent3">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM0Mode2Duty1">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM0Mode2Precent2">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM0Mode2Duty0">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM0Mode2Precent1">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxGPTM0Mode2Duty3">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelGPTM0Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxGPTM0Mode2Duty2">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelGPTM0Mode2Precent0">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxGPTM0Mode2Duty1">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelGPTM0Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxGPTM0Mode2Duty0">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxGPTM0Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="groupBoxGPTM0Mode3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxGPTM0Mode3CH3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxGPTM0Mode3CH2">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxGPTM0Mode3CH1">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxGPTM0Mode3CH0">
+    <enable>false</enable>
+  </control>
+  <control name="comboBoxGPTM0Mode3ModeCH3">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxGPTM0Mode3ModeCH2">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxGPTM0Mode3ModeCH1">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxGPTM0Mode3ModeCH0">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxGPTM0Mode3SrcCH3">
+    <enable>false</enable>
+    <value>TI3</value>
+  </control>
+  <control name="comboBoxGPTM0Mode3SrcCH2">
+    <enable>false</enable>
+    <value>TI2</value>
+  </control>
+  <control name="comboBoxGPTM0Mode3SrcCH1">
+    <enable>false</enable>
+    <value>TI1</value>
+  </control>
+  <control name="comboBoxGPTM0Mode3SrcCH0">
+    <enable>false</enable>
+    <value>TI0</value>
+  </control>
+  <control name="checkBoxGPTM0Mode3EnableCH3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxGPTM0Mode3EnableCH2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxGPTM0Mode3EnableCH1">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxGPTM0Mode3EnableCH0">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonGPTM1Mode3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="labelGPTM1Note2">
+    <enable>true</enable>
+  </control>
+  <control name="labelGPTM1Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonGPTM1Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxGPTM1Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxGPTM1Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxGPTM1Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelGPTM1Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxGPTM1Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxGPTM1Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonGPTM1Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxGPTM1Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM1Mode2Duty3">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM1Mode2Duty2">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM1Mode2Precent3">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM1Mode2Duty1">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM1Mode2Precent2">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM1Mode2Duty0">
+    <enable>false</enable>
+  </control>
+  <control name="labelGPTM1Mode2Precent1">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxGPTM1Mode2Duty3">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelGPTM1Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxGPTM1Mode2Duty2">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelGPTM1Mode2Precent0">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxGPTM1Mode2Duty1">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelGPTM1Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxGPTM1Mode2Duty0">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxGPTM1Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="groupBoxGPTM1Mode3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxGPTM1Mode3CH3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxGPTM1Mode3CH2">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxGPTM1Mode3CH1">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxGPTM1Mode3CH0">
+    <enable>false</enable>
+  </control>
+  <control name="comboBoxGPTM1Mode3ModeCH3">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxGPTM1Mode3ModeCH2">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxGPTM1Mode3ModeCH1">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxGPTM1Mode3ModeCH0">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxGPTM1Mode3SrcCH3">
+    <enable>false</enable>
+    <value>TI3</value>
+  </control>
+  <control name="comboBoxGPTM1Mode3SrcCH2">
+    <enable>false</enable>
+    <value>TI2</value>
+  </control>
+  <control name="comboBoxGPTM1Mode3SrcCH1">
+    <enable>false</enable>
+    <value>TI1</value>
+  </control>
+  <control name="comboBoxGPTM1Mode3SrcCH0">
+    <enable>false</enable>
+    <value>TI0</value>
+  </control>
+  <control name="checkBoxGPTM1Mode3EnableCH3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxGPTM1Mode3EnableCH2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxGPTM1Mode3EnableCH1">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxGPTM1Mode3EnableCH0">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonMCTM0Mode3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="labelMCTM0Note2">
+    <enable>true</enable>
+  </control>
+  <control name="labelMCTM0Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonMCTM0Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxMCTM0Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxMCTM0Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxMCTM0Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelMCTM0Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxMCTM0Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxMCTM0Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonMCTM0Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxMCTM0Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM0Mode2Duty3">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM0Mode2Duty2">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM0Mode2Precent3">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM0Mode2Duty1">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM0Mode2Precent2">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM0Mode2Duty0">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM0Mode2Precent1">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxMCTM0Mode2Duty3">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelMCTM0Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxMCTM0Mode2Duty2">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelMCTM0Mode2Precent0">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxMCTM0Mode2Duty1">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelMCTM0Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxMCTM0Mode2Duty0">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxMCTM0Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="groupBoxMCTM0Mode3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxMCTM0Mode3CH3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxMCTM0Mode3CH2">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxMCTM0Mode3CH1">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxMCTM0Mode3CH0">
+    <enable>false</enable>
+  </control>
+  <control name="comboBoxMCTM0Mode3ModeCH3">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxMCTM0Mode3ModeCH2">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxMCTM0Mode3ModeCH1">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxMCTM0Mode3ModeCH0">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxMCTM0Mode3SrcCH3">
+    <enable>false</enable>
+    <value>TI3</value>
+  </control>
+  <control name="comboBoxMCTM0Mode3SrcCH2">
+    <enable>false</enable>
+    <value>TI2</value>
+  </control>
+  <control name="comboBoxMCTM0Mode3SrcCH1">
+    <enable>false</enable>
+    <value>TI1</value>
+  </control>
+  <control name="comboBoxMCTM0Mode3SrcCH0">
+    <enable>false</enable>
+    <value>TI0</value>
+  </control>
+  <control name="checkBoxMCTM0Mode3EnableCH3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxMCTM0Mode3EnableCH2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxMCTM0Mode3EnableCH1">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxMCTM0Mode3EnableCH0">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonMCTM1Mode3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="labelMCTM1Note2">
+    <enable>true</enable>
+  </control>
+  <control name="labelMCTM1Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonMCTM1Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxMCTM1Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxMCTM1Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxMCTM1Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelMCTM1Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxMCTM1Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxMCTM1Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonMCTM1Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxMCTM1Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM1Mode2Duty3">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM1Mode2Duty2">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM1Mode2Precent3">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM1Mode2Duty1">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM1Mode2Precent2">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM1Mode2Duty0">
+    <enable>false</enable>
+  </control>
+  <control name="labelMCTM1Mode2Precent1">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxMCTM1Mode2Duty3">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelMCTM1Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxMCTM1Mode2Duty2">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelMCTM1Mode2Precent0">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxMCTM1Mode2Duty1">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelMCTM1Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxMCTM1Mode2Duty0">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxMCTM1Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="groupBoxMCTM1Mode3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxMCTM1Mode3CH3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxMCTM1Mode3CH2">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxMCTM1Mode3CH1">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxMCTM1Mode3CH0">
+    <enable>false</enable>
+  </control>
+  <control name="comboBoxMCTM1Mode3ModeCH3">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxMCTM1Mode3ModeCH2">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxMCTM1Mode3ModeCH1">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxMCTM1Mode3ModeCH0">
+    <enable>false</enable>
+    <value>Capture Low Level</value>
+  </control>
+  <control name="comboBoxMCTM1Mode3SrcCH3">
+    <enable>false</enable>
+    <value>TI3</value>
+  </control>
+  <control name="comboBoxMCTM1Mode3SrcCH2">
+    <enable>false</enable>
+    <value>TI2</value>
+  </control>
+  <control name="comboBoxMCTM1Mode3SrcCH1">
+    <enable>false</enable>
+    <value>TI1</value>
+  </control>
+  <control name="comboBoxMCTM1Mode3SrcCH0">
+    <enable>false</enable>
+    <value>TI0</value>
+  </control>
+  <control name="checkBoxMCTM1Mode3EnableCH3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxMCTM1Mode3EnableCH2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxMCTM1Mode3EnableCH1">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxMCTM1Mode3EnableCH0">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="labelPWM0Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonPWM0Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxPWM0Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxPWM0Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxPWM0Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelPWM0Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxPWM0Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxPWM0Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonPWM0Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxPWM0Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM0Mode2Duty3">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM0Mode2Duty2">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM0Mode2Precent3">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM0Mode2Duty1">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM0Mode2Precent2">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM0Mode2Duty0">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM0Mode2Precent1">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxPWM0Mode2Duty3">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelPWM0Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxPWM0Mode2Duty2">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelPWM0Mode2Precent0">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxPWM0Mode2Duty1">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelPWM0Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxPWM0Mode2Duty0">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxPWM0Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="labelPWM1Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonPWM1Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxPWM1Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxPWM1Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxPWM1Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelPWM1Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxPWM1Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxPWM1Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonPWM1Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxPWM1Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM1Mode2Duty3">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM1Mode2Duty2">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM1Mode2Precent3">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM1Mode2Duty1">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM1Mode2Precent2">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM1Mode2Duty0">
+    <enable>false</enable>
+  </control>
+  <control name="labelPWM1Mode2Precent1">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxPWM1Mode2Duty3">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelPWM1Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxPWM1Mode2Duty2">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelPWM1Mode2Precent0">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxPWM1Mode2Duty1">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="labelPWM1Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxPWM1Mode2Duty0">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxPWM1Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="pictureBoxSPI0Mode">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxSPI0ClockPre">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxSPI0TxFIFO">
+    <enable>true</enable>
+    <value>4</value>
+  </control>
+  <control name="comboBoxSPI0RxFIFO">
+    <enable>true</enable>
+    <value>4</value>
+  </control>
+  <control name="comboBoxSPI0CPHA">
+    <enable>true</enable>
+    <value>SPI_CPHA_FIRST</value>
+  </control>
+  <control name="labelSPI0TxFIFO">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSPI0CPOL">
+    <enable>true</enable>
+    <value>SPI_CPOL_LOW</value>
+  </control>
+  <control name="labelSPI0RxFIFO">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSPI0FirstBit">
+    <enable>true</enable>
+    <value>SPI_FIRSTBIT_MSB</value>
+  </control>
+  <control name="checkBoxSPI0EnableFIFO">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxSPI0EnableIrq">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="comboBoxSPI0SELPolarity">
+    <enable>true</enable>
+    <value>SPI_SELPOLARITY_LOW</value>
+  </control>
+  <control name="comboBoxSPI0SELMode">
+    <enable>true</enable>
+    <value>SPI_SEL_SOFTWARE</value>
+  </control>
+  <control name="comboBoxSPI0DataLength">
+    <enable>true</enable>
+    <value>SPI_DATALENGTH_8</value>
+  </control>
+  <control name="comboBoxSPI0Mode">
+    <enable>true</enable>
+    <value>SPI_MASTER</value>
+  </control>
+  <control name="labelSPI0ClockPre2">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI0ClockPre">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI0CPHA">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI0CPOL">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI0FirstBit">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI0SELPolarity">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI0SELMode">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI0DataLength">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI0Mode">
+    <enable>true</enable>
+  </control>
+  <control name="pictureBoxSPI1Mode">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI1ClockPre2">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxSPI1ClockPre">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxSPI1TxFIFO">
+    <enable>true</enable>
+    <value>4</value>
+  </control>
+  <control name="comboBoxSPI1RxFIFO">
+    <enable>true</enable>
+    <value>4</value>
+  </control>
+  <control name="comboBoxSPI1CPHA">
+    <enable>true</enable>
+    <value>SPI_CPHA_FIRST</value>
+  </control>
+  <control name="labelSPI1TxFIFO">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSPI1CPOL">
+    <enable>true</enable>
+    <value>SPI_CPOL_LOW</value>
+  </control>
+  <control name="labelSPI1RxFIFO">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSPI1FirstBit">
+    <enable>true</enable>
+    <value>SPI_FIRSTBIT_MSB</value>
+  </control>
+  <control name="checkBoxSPI1EnableFIFO">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxSPI1EnableIrq">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="comboBoxSPI1SELPolarity">
+    <enable>true</enable>
+    <value>SPI_SELPOLARITY_LOW</value>
+  </control>
+  <control name="comboBoxSPI1SELMode">
+    <enable>true</enable>
+    <value>SPI_SEL_SOFTWARE</value>
+  </control>
+  <control name="comboBoxSPI1DataLength">
+    <enable>true</enable>
+    <value>SPI_DATALENGTH_8</value>
+  </control>
+  <control name="comboBoxSPI1Mode">
+    <enable>true</enable>
+    <value>SPI_MASTER</value>
+  </control>
+  <control name="labelSPI1ClockPre">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI1CPHA">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI1CPOL">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI1FirstBit">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI1SELPolarity">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI1SELMode">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI1DataLength">
+    <enable>true</enable>
+  </control>
+  <control name="labelSPI1Mode">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxUART0AsRetarget">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="labelUART0BaudRate2">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxUART0TxFIFO">
+    <enable>false</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxUART0RxFIFO">
+    <enable>false</enable>
+    <value>1</value>
+  </control>
+  <control name="labelUART0TxFIFO">
+    <enable>false</enable>
+  </control>
+  <control name="labelUART0RxFIFO">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxUART0EnableFIFO">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="textBoxUART0BaudRate">
+    <enable>true</enable>
+    <value>115200</value>
+  </control>
+  <control name="comboBoxUART0Parity">
+    <enable>true</enable>
+    <value>USART_PARITY_NO</value>
+  </control>
+  <control name="checkBoxUART0TimeoutIrq">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxUART0EnableIrq">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="comboBoxUART0StopBits">
+    <enable>true</enable>
+    <value>USART_STOPBITS_1</value>
+  </control>
+  <control name="comboBoxUART0DataLength">
+    <enable>true</enable>
+    <value>USART_WORDLENGTH_8B</value>
+  </control>
+  <control name="comboBoxUART0Mode">
+    <enable>false</enable>
+    <value>USART_MODE_NORMAL</value>
+  </control>
+  <control name="labelUART0Parity">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART0StopBits">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART0DataLength">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART0BaudRate">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART0Mode">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxUART1AsRetarget">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="labelUART1BaudRate2">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxUART1TxFIFO">
+    <enable>false</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxUART1RxFIFO">
+    <enable>false</enable>
+    <value>1</value>
+  </control>
+  <control name="labelUART1TxFIFO">
+    <enable>false</enable>
+  </control>
+  <control name="labelUART1RxFIFO">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxUART1EnableFIFO">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="textBoxUART1BaudRate">
+    <enable>true</enable>
+    <value>115200</value>
+  </control>
+  <control name="comboBoxUART1Parity">
+    <enable>true</enable>
+    <value>USART_PARITY_NO</value>
+  </control>
+  <control name="checkBoxUART1TimeoutIrq">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxUART1EnableIrq">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="comboBoxUART1StopBits">
+    <enable>true</enable>
+    <value>USART_STOPBITS_1</value>
+  </control>
+  <control name="comboBoxUART1DataLength">
+    <enable>true</enable>
+    <value>USART_WORDLENGTH_8B</value>
+  </control>
+  <control name="comboBoxUART1Mode">
+    <enable>false</enable>
+    <value>USART_MODE_NORMAL</value>
+  </control>
+  <control name="labelUART1Parity">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART1StopBits">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART1DataLength">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART1BaudRate">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART1Mode">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxUART2AsRetarget">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="labelUART2BaudRate2">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxUART2TxFIFO">
+    <enable>false</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxUART2RxFIFO">
+    <enable>false</enable>
+    <value>1</value>
+  </control>
+  <control name="labelUART2TxFIFO">
+    <enable>false</enable>
+  </control>
+  <control name="labelUART2RxFIFO">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxUART2EnableFIFO">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="textBoxUART2BaudRate">
+    <enable>true</enable>
+    <value>115200</value>
+  </control>
+  <control name="comboBoxUART2Parity">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="checkBoxUART2TimeoutIrq">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxUART2EnableIrq">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="comboBoxUART2StopBits">
+    <enable>true</enable>
+    <value>USART_STOPBITS_1</value>
+  </control>
+  <control name="comboBoxUART2DataLength">
+    <enable>true</enable>
+    <value>USART_WORDLENGTH_8B</value>
+  </control>
+  <control name="comboBoxUART2Mode">
+    <enable>false</enable>
+    <value>USART_MODE_NORMAL</value>
+  </control>
+  <control name="labelUART2Parity">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART2StopBits">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART2DataLength">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART2BaudRate">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART2Mode">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxUART3AsRetarget">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="labelUART3BaudRate2">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxUART3TxFIFO">
+    <enable>false</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxUART3RxFIFO">
+    <enable>false</enable>
+    <value>1</value>
+  </control>
+  <control name="labelUART3TxFIFO">
+    <enable>false</enable>
+  </control>
+  <control name="labelUART3RxFIFO">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxUART3EnableFIFO">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="textBoxUART3BaudRate">
+    <enable>true</enable>
+    <value>115200</value>
+  </control>
+  <control name="comboBoxUART3Parity">
+    <enable>true</enable>
+    <value>USART_PARITY_NO</value>
+  </control>
+  <control name="checkBoxUART3TimeoutIrq">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="checkBoxUART3EnableIrq">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="comboBoxUART3StopBits">
+    <enable>true</enable>
+    <value>USART_STOPBITS_1</value>
+  </control>
+  <control name="comboBoxUART3DataLength">
+    <enable>true</enable>
+    <value>USART_WORDLENGTH_8B</value>
+  </control>
+  <control name="comboBoxUART3Mode">
+    <enable>false</enable>
+    <value>USART_MODE_NORMAL</value>
+  </control>
+  <control name="labelUART3Parity">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART3StopBits">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART3DataLength">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART3BaudRate">
+    <enable>true</enable>
+  </control>
+  <control name="labelUART3Mode">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxUSART0AsRetarget">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="labelUSART0BaudRate2">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxUSART0TxFIFO">
+    <enable>true</enable>
+    <value>4</value>
+  </control>
+  <control name="comboBoxUSART0RxFIFO">
+    <enable>true</enable>
+    <value>4</value>
+  </control>
+  <control name="labelUSART0TxFIFO">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART0RxFIFO">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxUSART0EnableFIFO">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="textBoxUSART0BaudRate">
+    <enable>true</enable>
+    <value>9600</value>
+  </control>
+  <control name="comboBoxUSART0Parity">
+    <enable>true</enable>
+    <value>USART_PARITY_NO</value>
+  </control>
+  <control name="checkBoxUSART0TimeoutIrq">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxUSART0EnableIrq">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="comboBoxUSART0StopBits">
+    <enable>true</enable>
+    <value>USART_STOPBITS_1</value>
+  </control>
+  <control name="comboBoxUSART0DataLength">
+    <enable>true</enable>
+    <value>USART_WORDLENGTH_8B</value>
+  </control>
+  <control name="comboBoxUSART0Mode">
+    <enable>true</enable>
+    <value>USART_MODE_NORMAL</value>
+  </control>
+  <control name="labelUSART0Parity">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART0StopBits">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART0DataLength">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART0BaudRate">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART0Mode">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxUSART1AsRetarget">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="labelUSART1BaudRate2">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxUSART1TxFIFO">
+    <enable>true</enable>
+    <value>4</value>
+  </control>
+  <control name="comboBoxUSART1RxFIFO">
+    <enable>true</enable>
+    <value>4</value>
+  </control>
+  <control name="labelUSART1TxFIFO">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART1RxFIFO">
+    <enable>true</enable>
+  </control>
+  <control name="checkBoxUSART1EnableFIFO">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="textBoxUSART1BaudRate">
+    <enable>true</enable>
+    <value>115200</value>
+  </control>
+  <control name="comboBoxUSART1Parity">
+    <enable>true</enable>
+    <value>USART_PARITY_NO</value>
+  </control>
+  <control name="checkBoxUSART1TimeoutIrq">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxUSART1EnableIrq">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="comboBoxUSART1StopBits">
+    <enable>true</enable>
+    <value>USART_STOPBITS_1</value>
+  </control>
+  <control name="comboBoxUSART1DataLength">
+    <enable>true</enable>
+    <value>USART_WORDLENGTH_8B</value>
+  </control>
+  <control name="comboBoxUSART1Mode">
+    <enable>true</enable>
+    <value>USART_MODE_NORMAL</value>
+  </control>
+  <control name="labelUSART1Parity">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART1StopBits">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART1DataLength">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART1BaudRate">
+    <enable>true</enable>
+  </control>
+  <control name="labelUSART1Mode">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxI2C0Address">
+    <enable>false</enable>
+    <value>1</value>
+  </control>
+  <control name="textBoxI2C0Speed">
+    <enable>true</enable>
+    <value>100000</value>
+  </control>
+  <control name="comboBoxI2C0AddressingMode">
+    <enable>true</enable>
+    <value>7bit</value>
+  </control>
+  <control name="comboBoxI2C0Mode">
+    <enable>true</enable>
+    <value>Master</value>
+  </control>
+  <control name="labelI2C0Address2">
+    <enable>false</enable>
+  </control>
+  <control name="labelI2C0Address">
+    <enable>false</enable>
+  </control>
+  <control name="labelI2C0AddressingMode">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2C0Speed2">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2C0Speed">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2C0Mode">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2C1Address2">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxI2C1Address">
+    <enable>false</enable>
+    <value>1</value>
+  </control>
+  <control name="textBoxI2C1Speed">
+    <enable>true</enable>
+    <value>100000</value>
+  </control>
+  <control name="comboBoxI2C1AddressingMode">
+    <enable>true</enable>
+    <value>7bit</value>
+  </control>
+  <control name="comboBoxI2C1Mode">
+    <enable>true</enable>
+    <value>Master</value>
+  </control>
+  <control name="labelI2C1Address">
+    <enable>false</enable>
+  </control>
+  <control name="labelI2C1AddressingMode">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2C1Speed2">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2C1Speed">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2C1Mode">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI0RESETGPIOErr">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI0CMDGPIOErr">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxSCI0ETU">
+    <enable>true</enable>
+    <value>372</value>
+  </control>
+  <control name="textBoxSCI0GuardTime">
+    <enable>true</enable>
+    <value>16</value>
+  </control>
+  <control name="comboBoxSCI0ClockMode">
+    <enable>true</enable>
+    <value>CLK_HARDWARE</value>
+  </control>
+  <control name="comboBoxSCI0ClockPre">
+    <enable>true</enable>
+    <value>CLKPRESCALER_12</value>
+  </control>
+  <control name="labelSCI0ClockMode">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI0Compensation">
+    <enable>true</enable>
+    <value>COMPENSATION_DISABLE</value>
+  </control>
+  <control name="labelSCI0ClockPre">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI0Compensation">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI0CardPolarity">
+    <enable>true</enable>
+    <value>CARDPOLARITY_LOW</value>
+  </control>
+  <control name="labelSCI0CardPolarity">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI0ETU">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI0Convention">
+    <enable>true</enable>
+    <value>CONVENTION_DIRECT</value>
+  </control>
+  <control name="labelSCI0Convention">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI0GuardTime">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI0Retry">
+    <enable>true</enable>
+    <value>RETRY_NO</value>
+  </control>
+  <control name="labelSCI0Retry">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI0RESETGPIO">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI0RESETGPIO">
+    <enable>true</enable>
+    <value>PA1</value>
+  </control>
+  <control name="comboBoxSCI0CMDGPIO">
+    <enable>true</enable>
+    <value>PA0</value>
+  </control>
+  <control name="labelSCI0CMDGPIO">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI0Mode">
+    <enable>true</enable>
+    <value>MODE_SCI</value>
+  </control>
+  <control name="labelSCI0Mode">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI1RESETGPIOErr">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI1CMDGPIOErr">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI1RESETGPIO">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI1RESETGPIO">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="comboBoxSCI1CMDGPIO">
+    <enable>true</enable>
+    <value></value>
+  </control>
+  <control name="labelSCI1CMDGPIO">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxSCI1ETU">
+    <enable>true</enable>
+    <value>372</value>
+  </control>
+  <control name="textBoxSCI1GuardTime">
+    <enable>true</enable>
+    <value>16</value>
+  </control>
+  <control name="comboBoxSCI1ClockMode">
+    <enable>true</enable>
+    <value>CLK_HARDWARE</value>
+  </control>
+  <control name="labelSCI1ClockMode">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI1Compensation">
+    <enable>true</enable>
+    <value>COMPENSATION_DISABLE</value>
+  </control>
+  <control name="labelSCI1Compensation">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI1ETU">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCI1GuardTime">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI1ClockPre">
+    <enable>true</enable>
+    <value>CLKPRESCALER_12</value>
+  </control>
+  <control name="labelSCI1ClockPre">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI1CardPolarity">
+    <enable>true</enable>
+    <value>CARDPOLARITY_LOW</value>
+  </control>
+  <control name="labelSCI1CardPolarity">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI1Convention">
+    <enable>true</enable>
+    <value>CONVENTION_DIRECT</value>
+  </control>
+  <control name="labelSCI1Convention">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI1Retry">
+    <enable>true</enable>
+    <value>RETRY_NO</value>
+  </control>
+  <control name="labelSCI1Retry">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCI1Mode">
+    <enable>true</enable>
+    <value>MODE_SCI</value>
+  </control>
+  <control name="labelSCI1Mode">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIBank">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxEBIReadHoldTime">
+    <enable>true</enable>
+    <value>1</value>
+  </control>
+  <control name="comboBoxEBIBank">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="textBoxEBIReadStrobeTime">
+    <enable>true</enable>
+    <value>5</value>
+  </control>
+  <control name="labelEBIMode">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxEBIReadSetupTime">
+    <enable>true</enable>
+    <value>2</value>
+  </control>
+  <control name="comboBoxEBIMode">
+    <enable>true</enable>
+    <value>D8A8</value>
+  </control>
+  <control name="textBoxEBIWriteHoldTime">
+    <enable>true</enable>
+    <value>1</value>
+  </control>
+  <control name="labelEBIIdleCycle">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxEBIWriteStrobeTime">
+    <enable>true</enable>
+    <value>2</value>
+  </control>
+  <control name="comboBoxEBIIdleCycle">
+    <enable>true</enable>
+    <value>ENABLE</value>
+  </control>
+  <control name="textBoxEBIWriteSetupTime">
+    <enable>true</enable>
+    <value>2</value>
+  </control>
+  <control name="labelEBISelPolarity">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxEBIAddrHoldTime">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxEBISelPolarity">
+    <enable>true</enable>
+    <value>LOW</value>
+  </control>
+  <control name="textBoxEBIAddrSetupTime">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="labelEBIAddrLatchPolarity">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxEBIIdleCyleTime">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxEBIAddrLatchPolarity">
+    <enable>true</enable>
+    <value>LOW</value>
+  </control>
+  <control name="labelEBIReadHoldTime">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIWritePolarity">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIReadStrobeTime">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxEBIWritePolarity">
+    <enable>true</enable>
+    <value>LOW</value>
+  </control>
+  <control name="labelEBIReadSetupTime">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIReadPolarity">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIWriteHoldTime">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxEBIReadPolarity">
+    <enable>true</enable>
+    <value>LOW</value>
+  </control>
+  <control name="labelEBIWriteStrobeTime">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIIdleCyleTime">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIWriteSetupTime">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIAddrSetupTime">
+    <enable>true</enable>
+  </control>
+  <control name="labelEBIAddrHoldTime">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2SMode">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxI2SNDiv">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxI2SMode">
+    <enable>true</enable>
+    <value>MASTER_TX</value>
+  </control>
+  <control name="textBoxI2SXDiv">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="labelI2SFormat">
+    <enable>true</enable>
+  </control>
+  <control name="textBoxI2SYDiv">
+    <enable>true</enable>
+    <value>0</value>
+  </control>
+  <control name="comboBoxI2SFormat">
+    <enable>true</enable>
+    <value>I2S_JUSTIFIED_STEREO</value>
+  </control>
+  <control name="labelI2SNDiv">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2SWordWidth">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2SYDiv">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxI2SWordWidth">
+    <enable>true</enable>
+    <value>WORDWIDTH_8</value>
+  </control>
+  <control name="labelI2SXDiv">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2SMclkOut">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxI2SBclkInv">
+    <enable>true</enable>
+    <value>ENABLE</value>
+  </control>
+  <control name="comboBoxI2SMclkOut">
+    <enable>true</enable>
+    <value>ENABLE</value>
+  </control>
+  <control name="labelI2SBclkInv">
+    <enable>true</enable>
+  </control>
+  <control name="labelI2SMclkInv">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxI2SMclkInv">
+    <enable>true</enable>
+    <value>ENABLE</value>
+  </control>
+  <control name="radioButtonSCTM0Mode3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="labelSCTM0Note2">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCTM0Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonSCTM0Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxSCTM0Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCTM0Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxSCTM0Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelSCTM0Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxSCTM0Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxSCTM0Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM0Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxSCTM0Mode3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM0CaptureCycle">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM0CaptureHigh">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM0CaptureLow">
+    <enable>false</enable>
+  </control>
+  <control name="radioButtonSCTM0CaptureCycle">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM0CaptureHigh">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM0CaptureLow">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxSCTM0Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM0Mode2Duty">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM0Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM0Mode2Precent">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM0Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxSCTM0Mode2Duty">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxSCTM0Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="labelSCTM1Note2">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCTM1Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonSCTM1Mode3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM1Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxSCTM1Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCTM1Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxSCTM1Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelSCTM1Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxSCTM1Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxSCTM1Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM1Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxSCTM1Mode3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM1CaptureCycle">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM1CaptureHigh">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM1CaptureLow">
+    <enable>false</enable>
+  </control>
+  <control name="radioButtonSCTM1CaptureCycle">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM1CaptureHigh">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM1CaptureLow">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxSCTM1Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM1Mode2Duty">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM1Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM1Mode2Precent">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM1Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxSCTM1Mode2Duty">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxSCTM1Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="labelSCTM2Note2">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCTM2Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonSCTM2Mode3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM2Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxSCTM2Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCTM2Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxSCTM2Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelSCTM2Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxSCTM2Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxSCTM2Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM2Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxSCTM2Mode3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM2CaptureCycle">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM2CaptureHigh">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM2CaptureLow">
+    <enable>false</enable>
+  </control>
+  <control name="radioButtonSCTM2CaptureCycle">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM2CaptureHigh">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM2CaptureLow">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxSCTM2Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM2Mode2Duty">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM2Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM2Mode2Precent">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM2Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxSCTM2Mode2Duty">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxSCTM2Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="labelSCTM3Note2">
+    <enable>true</enable>
+  </control>
+  <control name="labelSCTM3Note1">
+    <enable>true</enable>
+  </control>
+  <control name="radioButtonSCTM3Mode3">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM3Mode2">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="groupBoxSCTM3Mode1">
+    <enable>true</enable>
+  </control>
+  <control name="comboBoxSCTM3Mode1Cycle">
+    <enable>false</enable>
+    <value>ms</value>
+  </control>
+  <control name="textBoxSCTM3Mode1Cycle">
+    <enable>false</enable>
+    <value>10</value>
+  </control>
+  <control name="labelSCTM3Mode1Cycle">
+    <enable>false</enable>
+  </control>
+  <control name="checkBoxSCTM3Mode1EnableInt">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="checkBoxSCTM3Mode1Enable">
+    <enable>true</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM3Mode1">
+    <enable>true</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxSCTM3Mode3">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM3CaptureCycle">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM3CaptureHigh">
+    <enable>false</enable>
+  </control>
+  <control name="pictureBoxSCTM3CaptureLow">
+    <enable>false</enable>
+  </control>
+  <control name="radioButtonSCTM3CaptureCycle">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM3CaptureHigh">
+    <enable>false</enable>
+    <check>false</check>
+  </control>
+  <control name="radioButtonSCTM3CaptureLow">
+    <enable>false</enable>
+    <check>true</check>
+  </control>
+  <control name="groupBoxSCTM3Mode2">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM3Mode2Duty">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM3Mode2Freq">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM3Mode2Precent">
+    <enable>false</enable>
+  </control>
+  <control name="labelSCTM3Mode2Hz">
+    <enable>false</enable>
+  </control>
+  <control name="textBoxSCTM3Mode2Duty">
+    <enable>false</enable>
+    <value>50</value>
+  </control>
+  <control name="textBoxSCTM3Mode2Freq">
+    <enable>false</enable>
+    <value>1000</value>
+  </control>
+  <control name="tabControlOther">
+    <enable>true</enable>
+  </control>
+</ControlsInfo>
