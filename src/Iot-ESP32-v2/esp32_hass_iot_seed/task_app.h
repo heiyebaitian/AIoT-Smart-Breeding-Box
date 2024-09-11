@@ -8,6 +8,19 @@
 
 extern const bool DEBUG_MODE;
 
+/* I/O引脚配置 */
+extern const int sh_normalization_Pin; // 常态化培养区土壤湿度传感器
+extern const int sh_differentiation_Pin; // 差异化培养区土壤湿度传感器
+extern const int fan_normalization_Pin; // 常态化培养区通风系统
+extern const int light_normalization_Pin; // 常态化培养区光照系统
+extern const int refrigeration_normalization_Pin; // 常态化培养区制冷系统
+extern const int heating_normalization_Pin; // 常态化培养区制热系统
+extern const int fan_differentiation_Pin; // 差异化培养区通风系统
+extern const int light_differentiation_Pin; // 差异化培养区光照系统
+extern const int refrigeration_differentiation_Pin; // 差异化培养区制冷系统
+extern const int heating_differentiation_Pin; // 差异化培养区制热系统
+extern const int water_liquid_level_Pin; // 液位传感器
+
 /* 系统运行数据 */
 extern long rssi;
 
@@ -50,9 +63,8 @@ void State_check_app();
 void MQTT_event_app();
 void Iot_data_upload_app();
 void Serial1_analysis_app();
-uint16_t merge_high_low_bytes(uint8_t high_byte, uint8_t low_byte);
-bool bit7_analysis_set(char c);
-char clear_bit7(char c);
+void Sensor_rw_app();
+
 
 
 #endif //TASK_APP_H

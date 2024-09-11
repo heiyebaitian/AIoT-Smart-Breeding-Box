@@ -1,6 +1,7 @@
 // MQTT_driver.cpp  
 #include "MQTT_driver.h "  
 #include "task_app.h"
+#include "sensor_driver.h"
 
 
 void(* resetFunc) (void) = 0; //重启命令
@@ -141,6 +142,26 @@ void mqtt_callback(char *topic, byte *payload, unsigned int length)
         }
       }
 
+      // 执行滴灌指令
+      if(str_topic == "esp32/mechanical_arm/pump/open"){
+        if(str_payload == "start"){
+          if(DEBUG_MODE)Serial.printf("\n\n[DEBUG]系统即将执行滴灌操作！\n\n");
+          hass_debug_log("[SYS]系统即将执行滴灌操作！");
+          byte hexData[] = {0xFF, 0x00, 0x01, 0x01, 0x01, 0x01, 0x01, 0xFE};
+          Serial2.write(hexData, sizeof(hexData));
+        }
+      }
+
+      // 执行滴灌指令
+      if(str_topic == "esp32/mechanical_arm/clam/open"){
+        if(str_payload == "start"){
+          if(DEBUG_MODE)Serial.printf("\n\n[DEBUG]系统即将执行抓取操作！\n\n");
+          hass_debug_log("[SYS]系统即将执行抓取操作！");
+          byte hexData[] = {0xFF, 0x01, 0x00, 0x01, 0x01, 0x01, 0x01, 0xFE};
+          Serial2.write(hexData, sizeof(hexData));
+        }
+      }
+
       if(DEBUG_MODE){
       Serial.printf("\n[DEBUG]收到MQTT消息 主题[%s], 长度[%d]\n", str_topic.c_str(), length);
       Serial.printf("[DEBUG]消息内容:%s",str_payload.c_str());
@@ -168,6 +189,8 @@ void mqtt_subscribe_setup(){
   mqttClient.subscribe("esp32/differentiation/light");  // 差异化培养区光照系统
 
   mqttClient.subscribe("esp32/system/reboot");  // 系统重启指令
+  mqttClient.subscribe("esp32/mechanical_arm/pump/open");  // 滴灌按钮
+  mqttClient.subscribe("esp32/mechanical_arm/clam/open");  // 抓取按钮
   
   
 }
